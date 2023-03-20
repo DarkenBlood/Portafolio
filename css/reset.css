@@ -1,0 +1,84 @@
+/* RESET GABY */
+
+/* Definimos colores de la página */
+:root{
+    /* Colores */
+    --color-primario: #181818;
+    --color-secundario: #f0f0f0;
+    --color-background: #424242;
+
+    /* Tipografía */
+    --tipo--principal: Verdana, Geneva, sans-serif;
+    --tipo--secundaria: Georgia, Times New Roman, Times, serif;
+}
+
+/* Adaptamos al modo oscuro */
+@media (prefers-color-scheme: dark){
+    :root{
+        --color-primario: #f0f0f0;
+        --color-secundario: #181818;
+    }
+}
+/* Adaptamos al alto contraste */
+@media (prefers-contrast: hight){
+    :root{
+        --color-primario: #000000;
+        --color-secundario: #ffffff;
+    }
+}
+
+/* Reseteamos los margin y paddings */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+/* Evitamos problemas con imágenes */
+img, picture, video, iframe, figure{
+    display: block;
+    max-width: 100%;
+}
+
+/* Desactivamos los puntos de <li> */
+li{
+    list-style-type: none;
+}
+
+/* Cambiamos los enlases para que funcionen como cajas */
+a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+p a{
+    display: inline;
+}
+
+/* Modificamos anclas suaves */
+html{
+    scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de etiquetas de texto */
+h1, h2, h3, h4, h5, h6, span, p, a, strong, blockquote, i, b, u, em{
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos */
+blockquote:before, blockquote:after, q:before, q:after{
+    content: '';
+    content: none;
+}
+
+/* Modificamos la tipografía general */
+body{
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: var(--tipo--principal);
+}

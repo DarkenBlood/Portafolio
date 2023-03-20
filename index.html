@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8">
+	
+
+	<!-- Estilos CSS -->
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	
+	<!-- Atropos -->
+	<link rel="stylesheet" href="atropos/atropos.min.css" />
+	<link rel="hoja de estilo" href="scss/main.scss">   
+	
+	<!-- Fuentes -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu&display=swap" rel="stylesheet">
+	
+	<!-- Título e Ícono-->
+	<title>Gabriel Johann Rojas</title>
+	<link rel="icon" href="img/ojo.png" type="image/png">
+
+</head>
+<body id="body">
+
+<!-- Cursor -->
+	<div id="cursor__container">
+		<div id="cursor"></div>
+	</div>
+
+<!-- Audio -->
+	<audio id="audio">
+		<source src="sonidos/miau.mp3" type="audio/mpeg">
+		<source src="sonidos/miau.ogg" type="audio/ogg">
+		Tu navegador no soporta audio HTML5.
+	</audio>
+
+<!-- Preloader -->
+	<div class="preloader">
+		<div class="carga">
+			<div class="carga">
+				<div class="carga"></div>
+			</div>
+		</div>
+	</div>
+
+<!-- Cabezera -->
+	<header class="header">
+		<nav id="header__nav" class="nav">
+			<ul class="nav__list">
+				<li class="nav__item"><a href="#sobre-mi">Sobre mí</a></li>
+				<li class="nav__item"><a href="#mis-proyectos">Mis proyectos</a></li>
+				<li class="nav__item"><a href="#contacto">Contacto</a></li>
+			</ul>
+
+			<div class="caja-ojo">
+				<div class="mini-ojo">
+					<div class="mini-punto"></div>
+					<div class="mini-ceja"></div>
+				</div>
+			</div>
+			<div class="checkbox__container animate__fadeInUp">
+				<label class="switch">
+				  <input id="theme" class="checkbox" type="checkbox" checked>
+				  <span class="slider"></span>
+				</label>
+			</div>
+		</nav>
+	</header>
+	<main class="main">
+<!-- Inicio -->
+		<section id="inicio">
+			<div class="container inicio__container">
+				<h1 class="tittle-1 gaby">Hola <br> Soy Gabriel</h1>
+				<p class="text descripcion">
+					¿Qué tal? Soy un desarrollador frontend, asimismo
+					creé este portafolios con el afán de mostrar mis habilidades.
+				</p>
+			</div>
+			<div class="container inicio__container-ojo">
+				<div class="ojo">
+					<div id="div-sonido" class="punto"></div>
+				</div>
+			</div>
+		</section>
+		<!-- Sobre mí -->
+		<section id="sobre-mi">
+			<div class="card section__item">
+				<img class="perfil__card" src="" alt="Foto de perfil">
+				<h3 class="tittle-3">Gabriel Johann Rojas</h3>
+			</div>
+		</section>
+<!-- Mis proyectos -->
+		<section id="mis-proyectos">
+			<!-- carusel -->
+			<!-- <div class="container">
+				<h2  class="tittle-2">Mis proyectos</h2>
+				<div class="grid__container">
+					<article class="grid__item c">
+						<img class="grid__img" src="img/proyecto1.png" alt="Proyecto 1">
+					</article>
+					<article class="grid__item c">
+						<img class="grid__img" src="img/proyecto2.png" alt="Proyecto 2">
+					</article>
+					<article class="grid__item c">
+						<img class="grid__img" src="img/proyecto3.png" alt="Proyecto 3">
+					</article>
+					<button class="prev"></button>
+					<button class="next"></button>
+				</div>
+			</div> -->
+
+			<!-- main Atropos container (required), add your custom class here -->
+			<div class="atropos my-atropos">
+				<!-- scale container (required) -->
+				<div class="atropos-scale">
+					<!-- rotate container (required) -->
+					<div class="atropos-rotate">
+						<!-- inner container (required) -->
+						<div class="atropos-inner grid__item">
+							<!-- put your custom content here -->
+							<img class="grid__img" src="img/proyecto3.png" alt="Proyecto 3">
+							<div class="a">
+								<a class="ingresar-a" href="https://cañuelassur.com"><h1 class="ingresar-title">Ingresar al proyecto</h1></a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="atroposes">
+				<!-- main Atropos container (required), add your custom class here -->
+				<div class="atropos des-atropos my-atropos">
+					<!-- scale container (required) -->
+					<div class="atropos-scale">
+					<!-- rotate container (required) -->
+					<div class="atropos-rotate">
+						<!-- inner container (required) -->
+						<div class="atropos-inner">
+						<!-- put your custom content here -->
+							<img src="img/proyecto3.png" data-atropos-offset="-5" style="width: 100%;">
+							<div class="text-over" data-atropos-offset="0">
+								Bicicleta <br>
+								Piola
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+<!-- Contacto -->
+		<section id="contacto">
+			<div class="container">
+				<h2  class="tittle-2">Contacto</h2>
+				<form class="form" action="sumbit">
+					<input class="form__input" type="text">
+					<input class="form__input" type="email">
+					<textarea class="form__input form__textarea" name="textarea" id="" cols="30" rows="10"></textarea>
+					<input class="form__input form__submit" type="submit">
+				</form>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<nav class="footer__nav">
+			<ul class="nav__list">
+				<li class="nav__item">Instagram</li>
+				<li class="nav__item">GitHub</li>
+				<li class="nav__item">Linkedin</li>
+				<li class="nav__item"></li>
+				<li class="nav__item"></li>
+			</ul>
+		</nav>
+	</footer>
+	<script type="text/JavaScript" src="js/function.js"></script>
+	<script src="atropos/atropos.min.js"></script>
+	<script>
+  		const myAtropos = Atropos({
+    	el: '.my-atropos',
+    	// rest of parameters
+  		});
+	</script>
+<body>
+</html>
