@@ -1,9 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<!-- Meta -->
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Gatsby 3.4.1">
+
+	<meta name="description" content="Gabriel Rojas, soporte TI, programador fullstack, diseñador UI/UX." data-react-helmet="true">
+	<meta name="robots" content="index,follow,archive">
+
+	<meta name="Keywords" content="Gabriel Rojas, soporte TI, programador fullstack, diseñador UI/UX.">
 	
+	<!-- Meta avanzado -->
+	<meta name="googlebot" content="index,follow">
+	<meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" data-react-helmet="true">
+	<meta name="subject" content="Portfolio">
+	<meta name="msapplication-TileColor" content="#0e1212">
+	<meta name="theme-color" content="#0e1212">
+	<meta name="application-name" content="iuri.is()">
+	<meta name="Content-Security-Policy" content="default-src 'self'">
+
+	<meta name="twitter:image" content="https://brittanychiang.com/og.png" data-react-helmet="true">
+	<meta name="twitter:description" content="Brittany Chiang is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences." data-react-helmet="true">
+	<meta name="twitter:title" content="Brittany Chiang" data-react-helmet="true">
+	<meta name="twitter:creator" content="@bchiang7" data-react-helmet="true">
+	<meta name="twitter:card" content="summary_large_image" data-react-helmet="true">
+	<meta name="twitter:site" content="@seanehalpin">
+	<meta name="twitter:image:src" content="https://www.seanhalpin.design/images/meta.png">
+
+	<!-- Open Graph data -->
+	<meta property="og:type" content="website" data-react-helmet="true">
+	<meta property="og:url" content="https://brittanychiang.com/" data-react-helmet="true">
+	<meta property="og:image" content="https://brittanychiang.com/og.png" data-react-helmet="true">
+	<meta property="og:description" content="Brittany Chiang is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences." data-react-helmet="true">
+	<meta property="og:title" content="Brittany Chiang" data-react-helmet="true">
+	<meta property="og:tag" content="https://www.seanhalpin.design/images/meta.png">
+	<meta property="og:site_name" content="seanehalpin">
+
+	<meta property="article:author" content="Iuri de Paula">
+	<meta name="image" content="https://brittanychiang.com/og.png" data-react-helmet="true">
+
 
 	<!-- Estilos CSS -->
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -22,6 +59,8 @@
 	<!-- Título e Ícono-->
 	<title>Gabriel Johann Rojas</title>
 	<link rel="icon" href="img/ojo.png" type="image/png">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="author" href="depaula.iuri@gmail.com">
 
 </head>
 <body id="body">
@@ -73,14 +112,14 @@
 	<main class="main">
 <!-- Inicio -->
 		<section id="inicio">
-			<div class="container inicio__container">
-				<h1 class="tittle-1 gaby">Hola <br> Soy Gabriel</h1>
-				<p class="text descripcion">
+			<div class="inicio__container">
+				<h1 class="title-1 gaby">Hola <br> Soy Gabriel</h1>
+				<p class="descripcion">
 					¿Qué tal? Soy un desarrollador frontend, asimismo
 					creé este portafolios con el afán de mostrar mis habilidades.
 				</p>
 			</div>
-			<div class="container inicio__container-ojo">
+			<div class="inicio__container-ojo">
 				<div class="ojo">
 					<div id="div-sonido" class="punto"></div>
 				</div>
@@ -88,16 +127,15 @@
 		</section>
 		<!-- Sobre mí -->
 		<section id="sobre-mi">
-			<div class="card section__item">
-				<img class="perfil__card" src="" alt="Foto de perfil">
-				<h3 class="tittle-3">Gabriel Johann Rojas</h3>
+			<div class="card">
+				<img class="card-img" src="img/html.png" alt="HTML5">
 			</div>
 		</section>
 <!-- Mis proyectos -->
 		<section id="mis-proyectos">
 			<!-- carusel -->
 			<!-- <div class="container">
-				<h2  class="tittle-2">Mis proyectos</h2>
+				<h2  class="le-2">Mis proyectos</h2>
 				<div class="grid__container">
 					<article class="grid__item c">
 						<img class="grid__img" src="img/proyecto1.png" alt="Proyecto 1">
@@ -113,28 +151,10 @@
 				</div>
 			</div> -->
 
-			<!-- main Atropos container (required), add your custom class here -->
-			<div class="atropos my-atropos">
-				<!-- scale container (required) -->
-				<div class="atropos-scale">
-					<!-- rotate container (required) -->
-					<div class="atropos-rotate">
-						<!-- inner container (required) -->
-						<div class="atropos-inner grid__item">
-							<!-- put your custom content here -->
-							<img class="grid__img" src="img/proyecto3.png" alt="Proyecto 3">
-							<div class="a">
-								<a class="ingresar-a" href="https://cañuelassur.com"><h1 class="ingresar-title">Ingresar al proyecto</h1></a>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			</div>
 
 			<div class="atroposes">
 				<!-- main Atropos container (required), add your custom class here -->
-				<div class="atropos des-atropos my-atropos">
+				<div class="atropos my-atropos">
 					<!-- scale container (required) -->
 					<div class="atropos-scale">
 					<!-- rotate container (required) -->
@@ -142,10 +162,11 @@
 						<!-- inner container (required) -->
 						<div class="atropos-inner">
 						<!-- put your custom content here -->
-							<img src="img/proyecto3.png" data-atropos-offset="-5" style="width: 100%;">
-							<div class="text-over" data-atropos-offset="0">
-								Bicicleta <br>
-								Piola
+							<img class="img-atropos" src="img/proyecto3.png" data-atropos-offset="-5" style="width: 100%;">
+							<div class="atropos__container" data-atropos-opacity="0;100%"> 
+								<!-- data-atropos-offset="0" -->
+								<h1 class="title-1-atropos">Proyecto de lotes</h1>
+								<a class="a-atropos" href="https://cañuelassur.com"><h3 class="title-3-atropos">Ingresar al proyecto</h1></a>
 							</div>
 						</div>
 					</div>
@@ -156,8 +177,8 @@
 		</section>
 <!-- Contacto -->
 		<section id="contacto">
-			<div class="container">
-				<h2  class="tittle-2">Contacto</h2>
+			<div class="contacto__container">
+				<h2  class="title-2">Contacto</h2>
 				<form class="form" action="sumbit">
 					<input class="form__input" type="text">
 					<input class="form__input" type="email">
@@ -183,7 +204,21 @@
 	<script>
   		const myAtropos = Atropos({
     	el: '.my-atropos',
-    	// rest of parameters
+    	// Parámetros
+		// rotateLock: true,
+		// rotateXMax: 15,
+		// rotateYMax: 15,
+		// shadow: true,
+		// shadowOffset: 10,
+		// shadowScale: 0.8,
+		// highlight: false,
+		// durationEnter: 600,
+		// activeOffset: 60
+		highlight: false,
+		rotateLock: true,
+		alwaysActive: true,
+    	shadow: true,
+    	shadowOffset: 50,
   		});
 	</script>
 <body>
