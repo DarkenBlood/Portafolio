@@ -8,68 +8,68 @@ function isTouchDevice() {
 
 const isTouch = isTouchDevice();
 
-// if (!isTouch){
-// 	// Ceja ojo
-// 	const miniCeja = document.getElementById('mini-ceja');
-// 	const miniPunto = document.getElementById('mini-punto');
+if (!isTouch){
+	// Ceja ojo
+	const miniCeja = document.getElementById('mini-ceja');
+	const miniPunto = document.getElementById('mini-punto');
 
-// 	// Cursor
-// 	const cursorEl = document.getElementById('cursor__container');
-// 	const isClickedClass = 'is-clicked';
-// 	const isHiddenClass = 'is-hidden';
-// 	const isLinkHoveredClass = 'is-link-hovered';
-// 	const hasCustomCursorClass = 'has-custom-cursor';
+	// Cursor
+	const cursorEl = document.getElementById('cursor__container');
+	const isClickedClass = 'is-clicked';
+	const isHiddenClass = 'is-hidden';
+	const isLinkHoveredClass = 'is-link-hovered';
+	const hasCustomCursorClass = 'has-custom-cursor';
 
-// 	const addEventListeners = () => {
-// 		document.addEventListener("mousemove", onMouseMove);
-// 		document.addEventListener("mousedown", onMouseDown);
-// 		document.addEventListener("mouseup", onMouseUp);
-// 		document.addEventListener("mouseenter", onMouseEnter);
-// 		document.addEventListener("mouseleave", onMouseLeave);
-// 		handleLinkHoverEvents();
-// 	};
+	const addEventListeners = () => {
+		document.addEventListener("mousemove", onMouseMove);
+		document.addEventListener("mousedown", onMouseDown);
+		document.addEventListener("mouseup", onMouseUp);
+		document.addEventListener("mouseenter", onMouseEnter);
+		document.addEventListener("mouseleave", onMouseLeave);
+		handleLinkHoverEvents();
+	};
 
-// 	const onMouseMove = (e) => {
-// 		// https://css-tricks.com/updating-a-css-variable-with-javascript/
-// 		cursorEl.style.setProperty('--cursor-x', e.clientX + "px");
-// 		cursorEl.style.setProperty('--cursor-y', e.clientY + "px");
-// 	};
+	const onMouseMove = (e) => {
+		// https://css-tricks.com/updating-a-css-variable-with-javascript/
+		cursorEl.style.setProperty('--cursor-x', e.clientX + "px");
+		cursorEl.style.setProperty('--cursor-y', e.clientY + "px");
+	};
 
-// 	const onMouseDown = () => {
-// 		cursorEl.classList.add(isClickedClass);
-// 	};
+	const onMouseDown = () => {
+		cursorEl.classList.add(isClickedClass);
+	};
 
-// 	const onMouseUp = () => {
-// 		cursorEl.classList.remove(isClickedClass);
-// 	};
+	const onMouseUp = () => {
+		cursorEl.classList.remove(isClickedClass);
+	};
 
-// 	const onMouseEnter = () => {
-// 		cursorEl.classList.remove(isHiddenClass);
-// 	};
+	const onMouseEnter = () => {
+		cursorEl.classList.remove(isHiddenClass);
+	};
 
-// 	const onMouseLeave = () => {
-// 		cursorEl.classList.add(isHiddenClass);
-// 	};
+	const onMouseLeave = () => {
+		cursorEl.classList.add(isHiddenClass);
+	};
 
-// 	const handleLinkHoverEvents = () => {
-// 		document.querySelectorAll('a, button, .js-link, input[type="button"], input[type="submit"], .checkbox__container, .mini-ojo, .idioma__container').forEach((el) => {
-// 			el.addEventListener("mouseover", () => {
-// 				cursorEl.classList.add(isLinkHoveredClass);
-// 				miniCeja.classList.add('active-ceja');
-// 				miniPunto.classList.add('active-punto');
-// 			  });
-// 			  el.addEventListener("mouseout", () => {
-// 				cursorEl.classList.remove(isLinkHoveredClass);
-// 				miniCeja.classList.remove('active-ceja');
-// 				miniPunto.classList.remove('active-punto');
-// 			  });
-// 			});
-// 	};
+	const handleLinkHoverEvents = () => {
+		document.querySelectorAll('a, button, .js-link, input[type="button"], input[type="submit"], .checkbox__container, .mini-ojo, .idioma__container').forEach((el) => {
+			el.addEventListener("mouseover", () => {
+				cursorEl.classList.add(isLinkHoveredClass);
+				miniCeja.classList.add('active-ceja');
+				miniPunto.classList.add('active-punto');
+			  });
+			  el.addEventListener("mouseout", () => {
+				cursorEl.classList.remove(isLinkHoveredClass);
+				miniCeja.classList.remove('active-ceja');
+				miniPunto.classList.remove('active-punto');
+			  });
+			});
+	};
 
 
-// 	addEventListeners();
-// 	document.body.classList.add(hasCustomCursorClass);
-// }
+	addEventListeners();
+	document.body.classList.add(hasCustomCursorClass);
+}
 
 
 
