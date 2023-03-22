@@ -75,7 +75,7 @@ html{
     scroll-behavior: smooth;
 }
 
-#body {
+.body {
     font-family: var(--first-font);
     background-color:var(--body-color-dark);
     line-height: 1.15;
@@ -89,12 +89,11 @@ html{
 }
 
 /* Cursor */
-#cursor__container {
+.cursor__container {
     --size: 20px;
     position: fixed;
     width: var(--size);
     height: var(--size);
-    top: calc(var(--size) / -2);
     left: calc(var(--size) / -2);
     transform: translate(var(--cursor-x, -100px), var(--cursor-y, -100px)) translateZ(0);
     pointer-events: none;
@@ -103,7 +102,7 @@ html{
     will-change: transform;
 }
 
-#cursor {
+.cursor {
     display: block;
     width: 100%;
     height: 100%;
@@ -115,15 +114,15 @@ html{
     transform: scale(0.9) translateZ(0);
 }
 
-#cursor__container.is-clicked #cursor {
+.cursor__container.is-clicked .cursor {
     opacity: 0.5;
 }
 
-#cursor__container.is-hidden #cursor {
+.cursor__container.is-hidden .cursor {
     opacity: 0;
 }
 
-#cursor__container.is-link-hovered #cursor {
+.cursor__container.is-link-hovered .cursor {
     transition: .1s;
     background-color: var(--body-color-light);
     animation: cursor .2s linear forwards alternate;
