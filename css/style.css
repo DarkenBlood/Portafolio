@@ -82,8 +82,8 @@ html{
     position: fixed;
     width: var(--size);
     height: var(--size);
-    top: -20px;
-    left: -20px;
+    top: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
     transform: translate(var(--cursor-x, -100px), var(--cursor-y, -100px)) translateZ(0);
     pointer-events: none;
     transition: none;
@@ -93,7 +93,7 @@ html{
 
 .cursor {
     display: block;
-    width: 100%;
+    width: 100%;    
     height: 100%;
     border-radius: 50%;
     border: 2px solid #dadada;
@@ -113,7 +113,7 @@ html{
 
 .cursor__container.is-link-hovered .cursor {
     transition: .1s;
-    background-color: var(--body-color-light);
+    background-color: #dadada;
     animation: cursor .2s linear forwards alternate;
 }
 
@@ -232,6 +232,11 @@ html{
 }
 
 /* Estilos del nav */
+
+.nav__item{
+    height: 100%;
+}
+
 .nav__list {
     display: flex;
     align-items: center;
@@ -246,7 +251,7 @@ html{
     position: relative;
 
     height: 100%;
-    padding: 10px 35px;
+    padding: 0 35px;
     border-radius: 20px;
 
     line-height: 2;
@@ -307,10 +312,10 @@ html{
     justify-content: center;
 }
 
-/* .checkbox {
+.checkbox {
     visibility: hidden;
     display: none;
-} */
+}
 
 .deslizante:before {
     display: block;
