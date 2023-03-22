@@ -9,12 +9,13 @@
     --size-icon: 1.5em;
 
     /* Texto */
-    --text-color: #191919;
+    
+    --text-color-descripcion-dark: #a3a3a3;
     --text-color-light: #f7f7f7;
-    --text-color-descripcion: #a3a3a3;
+
 
     /* Fondo */
-    --body-color-light: #dadada;
+    
     --body-color-dark: #111111;
 
     /* Contenedores */
@@ -29,31 +30,14 @@
     --first-font: 'Ubuntu', sans-serif;;
 }
 
-/* BODY THEMES */
 .light-theme{
-    background-color: var(--body-color-light);
+    --body-color-light: #dadada;
+    --text-color-dark: #191919;
 }
 
 .dark-theme{
     background-color: var(--body-color-dark);
-}
-
-/* CONTAINER THEMES */
-.light-container{
-    background-color: var(--container-color-light);
-}
-
-.dark-container{
-    background-color: var(--container-color-dark);
-}
-
-/* TEXT THEMES */
-.light-text{
-    background-color: var(--text-color);
-}
-
-.dark-text{
-    background-color: var(--text-color-light);
+    color: var(--text-color-light);
 }
 
 /* TITLES */
@@ -81,14 +65,15 @@ html{
 
 .body {
     font-family: var(--first-font);
-    background-color:var(--body-color-dark);
-    line-height: 1.15;
+    background-color: var(--body-color-dark);
     color: var(--text-color-light);
+
+    line-height: 1.15;
     overflow-x: hidden;
 }
 
 *::selection{
-    color: var(--text-color-descripcion);
+    color: var(--text-color-descripcion-dark);
     background-color: rgba(129,56,221, .3);
 }
 
@@ -164,6 +149,7 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 15px;
 
     height: 100%;
 }
@@ -172,19 +158,16 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-
-    width: 30px;
+    padding: 0 20px;
+    height: 100%;
 }
 
 .idioma{
-    /* height: var(--size-icon);
-    width: var(--size-icon); */
-    height: 100%;
-    width: 100%;
+    height: var(--size-icon);
+    width: var(--size-icon);
     border-radius: 20px;
     transition: .4s;
 }
-
 
 /* Estilos del mini ojo */
 .caja-ojo {
@@ -253,14 +236,10 @@ html{
 .nav__list {
     display: flex;
     height: 100%;
+    gap: 15px;
 }
 
-.nav__item {
-    margin: 0 10px;
-    
-}
-
-.nav__item a {
+.nav-a {
     display: flex;
     align-items: center;
 
@@ -277,11 +256,11 @@ html{
     transition: all 0.3s ease;
 }
 
-.nav__item a:focus {
+.nav-a:focus {
     color: rgba(172, 132, 224, 0.9);
 }
 
-.nav__item a:hover::after {
+.nav-a:hover::after {
     position: absolute;
     bottom: 15%;
     left: 15%;
@@ -304,62 +283,52 @@ html{
     to{ transform: scale(1); rotate: 2deg; opacity: 1;}
 }
 
-.nav__item a:hover{
+.nav-a:hover{
     color: rgba(172, 132, 224, 0.9);
+}
+
+.nav__item-right{
+    padding: 0 35px;
 }
 
 /* Themes Checkbox */
 .checkbox__container{
+    display: flex;
+    justify-content: center;
     height: 100%;
-    /* width: var(--size-icon, 1.4em); */
-    width: 30px;
+    padding: 0 20px;
 }
 
 .switch {
-    /* Tamaño del conenedor */
-    /* --width-of-switch: 3em; */
-    /* --height-of-switch: 1.5em;  */
-    /* width: var(--width-of-switch); */
-    /* height: var(--height-of-switch); */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    height: 100%;
+    height: var(--height-nav);
     width: 100%;
-    /* width: var(--size-icon, 1.4em); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-
-.checkbox {
+/* .checkbox {
     visibility: hidden;
     display: none;
-    height: 100%;
-}
+} */
 
 .deslizante:before {
-    position: absolute;
+    display: block;
+
     content: '';
-    height: 100%;
-    width: 100%;
-    /* height: var(--size-icon, 1.4em);
-    width: var(--size-icon, 1.4em); */
+    height: var(--size-icon, 1.4em);
+    width: var(--size-icon, 1.4em);
     border-radius: 20px;
-
-
     background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
     transition: .4s;
 }
 
 .checkbox:checked + .deslizante {
-    /* background-color: var(--container-color-light); */
     background-color: transparent;
 }
 
 .checkbox:checked + .deslizante:before {
-    /* left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em))); */
-    /* background: var(--container-color-light); */
     background: transparent;
-    /* cambie el valor del segundo recuadro en box-shadow para cambiar el ángulo y la dirección de la luna  */
     box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
 
@@ -414,7 +383,7 @@ html{
 
 /* Descripción corta */
 .descripcion{
-    color: var(--text-color-descripcion);
+    color: var(--text-color-descripcion-dark);
     line-height: 25px;
     text-align: start;
 }

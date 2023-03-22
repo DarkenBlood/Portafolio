@@ -52,7 +52,7 @@ if (!isTouch){
 	};
 
 	const handleLinkHoverEvents = () => {
-		document.querySelectorAll('a, button, .js-link, input[type="button"], input[type="submit"], .checkbox__container, .mini-ojo').forEach((el) => {
+		document.querySelectorAll('a, button, .js-link, input[type="button"], input[type="submit"], .checkbox__container, .mini-ojo, .idioma__container').forEach((el) => {
 			el.addEventListener("mouseover", () => {
 				cursorEl.classList.add(isLinkHoveredClass);
 				miniCeja.classList.add('active-ceja');
@@ -78,29 +78,26 @@ if (!isTouch){
 
 //Checkbox
 const checkbox = document.getElementById('theme');
-const body = document.getElementById('body');
+const body = document.body;
 const header = document.getElementById('nav-container');
 
-checkbox.addEventListener('change', function() {
-  if (this.checked) {
+checkbox.addEventListener('change', () => {
+  if (!this.checked) {
 	//Body light
-    body.classList.remove("dark-theme");
-    body.classList.add("light-theme");
+    body.classList.add('light-theme');
 
 	//Nav light
-	header.classList.remove("dark-container");
-	header.classList.add("light-container");
+	// header.classList.remove("dark-container");
+	// header.classList.add("light-container");
   } else {
 	//Body dark
-    body.classList.remove("light-theme");
-    body.classList.add("dark-theme");
+	body.classList.add('light-theme');
 
 	//Nav dark
-	header.classList.remove("light-container");
-	header.classList.add("dark-container");
+	// header.classList.remove("light-container");
+	// header.classList.add("dark-container");
   }
 });
-
 
 
 
