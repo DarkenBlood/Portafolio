@@ -9,7 +9,11 @@ function isTouchDevice() {
 const isTouch = isTouchDevice();
 
 if (!isTouch){
+	// Ceja ojo
+	const miniCeja = document.getElementById('mini-ceja');
+	const miniPunto = document.getElementById('mini-punto');
 
+	// Cursor
 	const cursorEl = document.getElementById('cursor__container');
 	const isClickedClass = 'is-clicked';
 	const isHiddenClass = 'is-hidden';
@@ -48,11 +52,20 @@ if (!isTouch){
 	};
 
 	const handleLinkHoverEvents = () => {
-		document.querySelectorAll('a, button, .js-link, input[type="button"], input[type="submit"], .checkbox__container').forEach((el) => {
-			el.addEventListener("mouseover", () => cursorEl.classList.add(isLinkHoveredClass) );
-			el.addEventListener("mouseout", () => cursorEl.classList.remove(isLinkHoveredClass) );
-		});
+		document.querySelectorAll('a, button, .js-link, input[type="button"], input[type="submit"], .checkbox__container, .mini-ojo').forEach((el) => {
+			el.addEventListener("mouseover", () => {
+				cursorEl.classList.add(isLinkHoveredClass);
+				miniCeja.classList.add('active-ceja');
+				miniPunto.classList.add('active-punto');
+			  });
+			  el.addEventListener("mouseout", () => {
+				cursorEl.classList.remove(isLinkHoveredClass);
+				miniCeja.classList.remove('active-ceja');
+				miniPunto.classList.remove('active-punto');
+			  });
+			});
 	};
+
 
 	addEventListeners();
 	document.body.classList.add(hasCustomCursorClass);
@@ -66,7 +79,7 @@ if (!isTouch){
 //Checkbox
 const checkbox = document.getElementById('theme');
 const body = document.getElementById('body');
-const header = document.getElementById('header__nav');
+const header = document.getElementById('nav-container');
 
 checkbox.addEventListener('change', function() {
   if (this.checked) {
@@ -96,12 +109,12 @@ checkbox.addEventListener('change', function() {
 let punto = document.getElementsByClassName("mini-punto");
 document.onmousemove = function(){
   let x = event.clientX * 100 / window.innerWidth + "%"
-  let y = event.clientY * 170 / window.innerHeight + "%"
+  let y = event.clientY * 100 / window.innerHeight + "%"
 
-  for(var i=0; i<2; i++){
+  for(let i = 0; i < 1; i ++){
     punto[i].style.left = x;
     punto[i].style.top = y;
-    punto[i].style.transform = "translate(-"+x+", -"+y+")";
+    punto[i].style.transform = "translate(-"+ x +", -"+ y +")";
   }
 }
 
@@ -208,73 +221,3 @@ const preloader = document.querySelector(".preloader");
 window.addEventListener("load", () => {
     preloader.classList.add("fadeOut");
 });
-
-
-
-//Carrusel flechas
-var slideIndex = 1;
-var dragging = false;
-var dragStart = 0;
-var dragEnd = 0;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-	showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-	showSlides(slideIndex = n);
-}
-
- function showSlides(n) {
-	var i;
-	var slides = document.getElementsByClassName("grid__item");
-	if (n > slides.length) {
-	  slideIndex = 1;
-	}
-	if (n < 1) {
-	  slideIndex = slides.length;
-	}
-	for (i = 0; i < slides.length; i++) {
-	  slides[i].style.display = "none";
-	}
-	slides[slideIndex - 1].style.display = "block";
-}
-
-document.addEventListener("mousedown", function(event) {
-  dragging = true;
-  dragStart = event.clientX;
-});
-
-document.addEventListener("mouseup", function(event) {
-  if (dragging) {
-    dragEnd = event.clientX;
-    if (dragEnd < dragStart) {
-      plusSlides(1);
-    } else if (dragEnd > dragStart) {
-      plusSlides(-1);
-    }
-  }
-  dragging = false;
-});
-
-
-//Carusel
-// $(".project-detail").slick({
-// 	slidesToShow: 1,
-// 	arrows: false,
-// 	asNavFor: '.project-strip',
-// 	autoplay: true,
-// 	autoplaySpeed: 3000
-// });
-
-// $(".project-strip").slick({
-// 	slidesToShow: 5,
-// 	slidesToScroll: 1,
-// 	arrows: false,
-// 	asNavFor: '.project-detail',
-// 	dots: false,
-// 	infinite: true,
-// 	centerMode: true,
-// 	focusOnSelect: true
-// });

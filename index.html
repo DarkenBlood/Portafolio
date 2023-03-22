@@ -22,13 +22,15 @@
 	<!-- <meta name="Content-Security-Policy" content="default-src 'self'"> -->
 
 	<!-- Open Graph data -->
+	<meta property="og:site_name" content="Gabriel Rojas">
+	<meta property="og:locale" content="es_ES">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://darkenblood.github.io/Portafolio/">
 	<meta property="og:image" content="img/portafolio.png">
 	<meta property="og:description" content="Gabriel Rojas, soporte TI, programador fullstack, diseñador UI/UX.">
 	<meta property="og:title" content="Gabriel Rojas">
 	<meta property="og:tag" content="img/portafolio.png">
-	<meta property="og:site_name" content="gabrielrojas">
+	
 
 	<meta property="article:author" content="Gabriel Rojas">
 	<meta name="image" content="img/portafolio.png">
@@ -56,11 +58,11 @@
 	<link rel="author" href="gabriel.johann.rojas369@gmail.com">
 
 </head>
-<body id="body">
+<body id="body" class="body light-theme">
 
 <!-- Cursor -->
-	<div id="cursor__container">
-		<div id="cursor"></div>
+	<div id="cursor__container" class="cursor__container">
+		<div id="cursor" class="cursor"></div>
 	</div>
 
 <!-- Audio -->
@@ -81,34 +83,42 @@
 
 <!-- Cabezera -->
 	<header class="header">
-		<nav id="header__nav" class="nav">
+		<nav id="nav-container" class="nav-container">
 			<ul class="nav__list">
 				<li class="nav__item"><a href="#sobre-mi">Sobre mí</a></li>
 				<li class="nav__item"><a href="#mis-proyectos">Mis proyectos</a></li>
 				<li class="nav__item"><a href="#contacto">Contacto</a></li>
 			</ul>
-
-			<div class="caja-ojo">
-				<div class="mini-ojo">
-					<div class="mini-punto"></div>
-					<div class="mini-ceja"></div>
-				</div>
+			<div class="nav-center caja-ojo">
+				<a href="#inicio">
+					<div class="mini-ojo">
+						<div id="mini-punto" class="mini-punto"></div>
+						<img id="mini-ceja" class="mini-ceja" src="svg/lash-white.svg" alt="Ojo">
+					</div>
+				</a>
 			</div>
-			<div class="checkbox__container animate__fadeInUp">
-				<label class="switch">
-				  <input id="theme" class="checkbox" type="checkbox" checked>
-				  <span class="slider"></span>
-				</label>
+			<div class="nav-right">
+				<div class="checkbox__container">
+					<label class="switch">
+						<input id="theme" class="checkbox animate__animated animate__fadeInRight" type="checkbox" checked>
+						<span class="deslizante"></span>
+					</label>
+				</div>
+				<div class="idioma__container">
+					<img class="idioma" src="svg/global.svg" alt="Idioma">
+				</div>
 			</div>
 		</nav>
 	</header>
+<!-- Contenido -->
 	<main class="main">
 <!-- Inicio -->
 		<section id="inicio">
 			<div class="inicio__container">
-				<h1 class="title-1 gaby">Hola <br> Soy Gabriel</h1>
+				<h1 class="descripcion-arriba">¿Qué tal? mi nombre es</h1>
+				<h1 class="title-1 gaby">Soy Gabriel <br> <span class="sub-gaby"> Soporte TI Trainee </span></h1>
 				<p class="descripcion">
-					¿Qué tal? Soy un desarrollador frontend, asimismo
+					Soy un desarrollador frontend, asimismo
 					creé este portafolios con el afán de mostrar mis habilidades.
 				</p>
 			</div>
@@ -118,7 +128,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- Sobre mí -->
+<!-- Sobre mí -->
 		<section id="sobre-mi">
 			<div class="card">
 				<img class="card-img" src="img/html.png" alt="HTML5">
@@ -181,6 +191,7 @@
 			</div>
 		</section>
 	</main>
+<!-- Pie de página -->
 	<footer class="footer">
 		<nav class="footer__nav">
 			<ul class="nav__list">
@@ -192,11 +203,11 @@
 			</ul>
 		</nav>
 	</footer>
+<!-- Scripts -->
 	<script type="text/JavaScript" src="js/function.js"></script>
 	<script src="atropos/atropos.min.js"></script>
 	<script>
-  		const myAtropos = Atropos({
-    	el: '.my-atropos',
+	const myAtropos = Atropos({ el: '.my-atropos',
     	// Parámetros
 		// rotateLock: true,
 		// rotateXMax: 15,
