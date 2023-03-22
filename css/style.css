@@ -88,7 +88,7 @@ html{
     transform: translate(var(--cursor-x, -100px), var(--cursor-y, -100px)) translateZ(0);
     pointer-events: none;
     transition: none;
-    z-index: 11000;
+    z-index: 51000;
     will-change: transform;
 }
 
@@ -235,6 +235,7 @@ html{
 /* Estilos del nav */
 .nav__list {
     display: flex;
+    align-items: center;
     height: 100%;
     gap: 15px;
 }
