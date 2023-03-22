@@ -83,12 +83,12 @@ html{
     position: fixed;
     width: var(--size);
     height: var(--size);
-    top: calc(var(--size) / -2);
-    left: calc(var(--size) / -2);
+    top: -20px;
+    left: -20px;
     transform: translate(var(--cursor-x, -100px), var(--cursor-y, -100px)) translateZ(0);
     pointer-events: none;
     transition: none;
-    z-index: 51000;
+    z-index: 11000;
     will-change: transform;
 }
 
@@ -104,15 +104,15 @@ html{
     transform: scale(0.9) translateZ(0);
 }
 
-.is-clicked .cursor {
+.cursor__container.is-clicked .cursor {
     opacity: 0.5;
 }
 
-.is-hidden .cursor {
+.cursor__container.is-hidden .cursor {
     opacity: 0;
 }
 
-.is-link-hovered .cursor {
+.cursor__container.is-link-hovered .cursor {
     transition: .1s;
     background-color: var(--body-color-light);
     animation: cursor .2s linear forwards alternate;
