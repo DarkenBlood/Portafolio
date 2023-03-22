@@ -11,11 +11,11 @@
     /* Texto */
     
     --text-color-descripcion-dark: #a3a3a3;
-    --text-color-light: #f7f7f7;
+    --text-color: #f7f7f7;
 
 
     /* Fondo */
-    --body-color-dark: #111111;
+    --body-color: #111111;
 
     /* Contenedores */
     --container-color-dark: #191919;
@@ -30,31 +30,31 @@
 }
 
 .light-theme{
-    --body-color-light: #dadada;
-    --text-color-dark: #191919;
+    --body-color: #dadada;
+    --text-color: #191919;
 }
 
 .dark-theme{
-    background-color: var(--body-color-dark);
-    color: var(--text-color-light);
+    background-color: var(--body-color);
+    color: var(--text-color);
 }
 
 /* TITLES */
 .title-1{
     font-size: 80px;
     padding: 5px;
-    color: var(--body-color-light);
+    color: var(--body-color);
 }
 
 .title-2{
     font-size: 20px;
     padding: 5px;
-    color: var(--body-color-light);
+    color: var(--body-color);
 }
 
 .title-3{
     font-size: 15px;
-    color: var(--text-color-light);
+    color: var(--text-color);
 }
 
 /* GENERAL */
@@ -62,10 +62,12 @@ html{
     scroll-behavior: smooth;
 }
 
+
+
 .body {
     font-family: var(--first-font);
-    background-color: var(--body-color-dark);
-    color: var(--text-color-light);
+    background-color: var(--body-color);
+    color: var(--text-color);
 
     line-height: 1.15;
     overflow-x: hidden;
@@ -612,9 +614,6 @@ section{
     border-radius: 50px;
     transition: background .5s;
     outline: none;
-}
-
-.atropos__container {
 }
 
 .a-atropos:hover{

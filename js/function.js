@@ -84,21 +84,20 @@ const header = document.getElementById('nav-container');
 checkbox.addEventListener('change', () => {
   if (!this.checked) {
 	//Body light
-    body.classList.add('light-theme');
+    body.classList.toggle('light-theme');
 
 	//Nav light
 	// header.classList.remove("dark-container");
 	// header.classList.add("light-container");
   } else {
 	//Body dark
-	body.classList.add('light-theme');
+	body.classList.rtoggle('light-theme');
 
 	//Nav dark
 	// header.classList.remove("light-container");
 	// header.classList.add("dark-container");
   }
 });
-
 
 
 
