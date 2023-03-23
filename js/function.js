@@ -2,8 +2,8 @@
 //Cursor
 function isTouchDevice() {
 	return (('ontouchstart' in window) ||
-			  (navigator.maxTouchPoints > 0) ||
-			  (navigator.msMaxTouchPoints > 0));
+	(navigator.maxTouchPoints > 0) ||
+	(navigator.msMaxTouchPoints > 0));
 }
 
 const isTouch = isTouchDevice();
@@ -66,7 +66,6 @@ if (!isTouch){
 			});
 	};
 
-
 	addEventListeners();
 	document.body.classList.add(hasCustomCursorClass);
 }
@@ -100,120 +99,126 @@ checkbox.addEventListener('change', () => {
 });
 
 
-
 //Ojo - movimiento
-let punto = document.getElementsByClassName("mini-punto");
-document.onmousemove = function(){
-  let x = event.clientX * 100 / window.innerWidth + "%"
-  let y = event.clientY * 100 / window.innerHeight + "%"
+const punto = document.querySelector('.mini-punto');
 
-  for(let i = 0; i < 1; i ++){
-    punto[i].style.left = x;
-    punto[i].style.top = y;
-    punto[i].style.transform = "translate(-"+ x +", -"+ y +")";
+if (punto) {
+  document.onmousemove = function(event){
+    const x = event.clientX * 100 / window.innerWidth + '%';
+    const y = event.clientY * 100 / window.innerHeight + '%';
+
+    punto.style.left = x;
+    punto.style.top = y;
+    punto.style.transform = `translate3d(-${x}, -${y}, 0)`;
   }
 }
 
-//Ceja
-// Agrega evento mouseover para mostrar la ceja
-// document.querySelector('.boton').addEventListener('mouseover', function() {
-// 	document.querySelector('.mini-ojo').classList.add('mostrar-ceja');
-// });
-  
-// document.querySelector('.checkbox').addEventListener('mouseover', function() {
-// 	document.querySelector('.mini-ojo').classList.add('mostrar-ceja');
-//  });
-  
-// // Agrega evento mouseout para ocultar la ceja
-// document.querySelector('.boton').addEventListener('mouseout', function() {
-// 	document.querySelector('.mini-ojo').classList.remove('mostrar-ceja');
-// });
-  
-// document.querySelector('.checkbox').addEventListener('mouseout', function() {
-// 	document.querySelector('.mini-ojo').classList.remove('mostrar-ceja');
-// });
 
+// Ojo - Aparición
+const cajaOjo = document.querySelector('.caja-ojo');
 
-//Ojo - aparición
 window.addEventListener('scroll', function() {
-    if (window.pageYOffset > 500) {
-        document.querySelector('.caja-ojo').classList.remove('caja-ojo-oculto');
-        document.querySelector('.caja-ojo').classList.add('caja-ojo-visible');
-    } else {
-        document.querySelector('.caja-ojo').classList.remove('caja-ojo-visible');
-        document.querySelector('.caja-ojo').classList.add('caja-ojo-oculto');
-    }
+  if (window.pageYOffset > 500) {
+    cajaOjo.classList.remove('caja-ojo-oculto');
+    cajaOjo.classList.add('caja-ojo-visible');
+  } else {
+    cajaOjo.classList.remove('caja-ojo-visible');
+    cajaOjo.classList.add('caja-ojo-oculto');
+  }
 });
 
 
+// Sonido
+const audio = document.getElementById('audio');
+const divSonido = document.getElementById('div-sonido');
 
-
-//Sonido
-document.getElementById("div-sonido").addEventListener("click", function() {
-	document.getElementById("audio").play();
+divSonido.addEventListener('click', function() {
+  audio.play();
 });
 
 
-
-
-
-//Nombre de la pestaña
-let prevTittle = document.title
+// Nombre de la pestaña
+const defaultTitle = document.title;
+const blurTitle = '¡No te vayas!';
 
 window.addEventListener('blur', () => {
-	prevTittle = document.title;
-	document.title = '¡No te vayas :(!';
-})
+  document.title = blurTitle;
+});
 
-addEventListener('focus', () => {
-	document.title = prevTittle;
-})
-
+window.addEventListener('focus', () => {
+  document.title = defaultTitle;
+});
 
 
+// Cambiar el ícono de la pestaña
+// const iconUrls = [
+// 	"img/centro.png",
+// 	"img/derecha-1.png", "img/derecha-2.png", "img/derecha-3.png", "img/derecha-4.png",
+// 	"img/derecha-3.png", "img/derecha-2.png", "img/derecha-1.png", "img/centro.png",
+// 	"img/izquierda-1.png", "img/izquierda-2.png", "img/izquierda-3.png", "img/izquierda-4.png", 
+// 	"img/izquierda-3.png", "img/izquierda-2.png", "img/izquierda-1.png", "img/centro.png"];
+
+// function cambiarIcono() {
+//     const index = 0;
+//     setInterval(function() {
+//         const link = document.querySelector("link[rel*='icon']") ||
+// 		document.createElement('link');
+//         link.type = 'image/png';
+//         link.rel = 'icon';
+//         link.href = iconUrls[index];
+//         document.getElementsByTagName('head')[0].appendChild(link);
+//         index++;
+//         if (index == iconUrls.length) {
+//             index = 0;
+//         }
+//     }, 100);
+// }
+// cambiarIcono();
 
 
-//Cambiar el ícono de la pestaña
-
-//Array de URLs con los diferentes iconos
-var iconUrls = [
-	"img/centro.png",
-	"img/derecha-1.png", "img/derecha-2.png", "img/derecha-3.png", "img/derecha-4.png",
-	"img/derecha-3.png", "img/derecha-2.png", "img/derecha-1.png", "img/centro.png",
-	"img/izquierda-1.png", "img/izquierda-2.png", "img/izquierda-3.png", "img/izquierda-4.png", 
-	"img/izquierda-3.png", "img/izquierda-2.png", "img/izquierda-1.png", "img/centro.png"];
-
-//Función que cambia el icono cada 2 segundos
-function cambiarIcono() {
-    var index = 0;
-    setInterval(function() {
-        //Obtener el elemento de la pestaña
-        var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
-        link.type = 'image/png';
-        link.rel = 'icon';
-        //Establecer la URL del icono
-        link.href = iconUrls[index];
-        //Reemplazar el icono actual con el nuevo
-        document.getElementsByTagName('head')[0].appendChild(link);
-        //Incrementar el índice para obtener el siguiente icono en el siguiente intervalo
-        index++;
-        //Si se llega al final del array de URLs, volver al principio
-        if (index == iconUrls.length) {
-            index = 0;
-        }
-    }, 100);
-}
-
-//Llamar a la función para iniciar el cambio de icono
-cambiarIcono();
-
-
-
-
-
-//Carga
+// Carga
 const preloader = document.querySelector(".preloader");
 
 window.addEventListener("load", () => {
     preloader.classList.add("fadeOut");
 });
+
+
+// #Inicio
+const enlaceInicio = document.getElementById("ir-arriba");
+	
+enlaceInicio.addEventListener("click", function(event) {
+	event.preventDefault();
+	window.scrollTo({ top: 0 });
+});
+
+
+// #Sobre mí
+// function cambiarContenido(texto) {
+//     var contenido = document.querySelector('#sobre-mi .card p');
+//     contenido.classList.add('oculto');
+//     setTimeout(function() {
+//       contenido.textContent = texto;
+//       contenido.classList.remove('oculto');
+//     }, 500);
+// }
+
+const botones = document.querySelectorAll('.boton');
+const contenido = document.getElementById('contenido');
+
+botones.forEach(boton => {
+  boton.addEventListener('click', () => {
+    // Cambiar el contenido según el botón seleccionado
+    const contenidoId = boton.dataset.contenido;
+    cambiarContenido(contenidoId);
+
+    // Cambiar la clase activo en los botones
+    botones.forEach(boton => boton.classList.remove('activo'));
+    boton.classList.add('activo');
+  });
+});
+
+function cambiarContenido(contenidoId) {
+  // Cambiar el contenido según el ID
+  // ...
+}

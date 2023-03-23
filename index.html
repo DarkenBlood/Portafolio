@@ -53,7 +53,7 @@
 	
 	<!-- Título e Ícono-->
 	<title>Gabriel Johann Rojas</title>
-	<link rel="icon" href="img/ojo.png" type="image/png">
+	<link rel="icon" href="img/ojo-3.png" type="image/png">
 	<!-- <link rel="manifest" href="/manifest.json"> -->
 	<link rel="author" href="gabriel.johann.rojas369@gmail.com">
 
@@ -82,15 +82,15 @@
 	</div>
 
 <!-- Cabezera -->
-	<header class="header">
+	<header id="header" class="header">
 		<nav id="nav-container" class="nav-container">
 			<ul class="nav__list">
-				<li class="nav__item"><a class="nav-a" href="#sobre-mi">Sobre mí</a></li>
-				<li class="nav__item"><a class="nav-a" href="#mis-proyectos">Mis proyectos</a></li>
-				<li class="nav__item"><a class="nav-a" href="#contacto">Contacto</a></li>
-			</ul>
+				<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#sobre-mi" data-number="01">Sobre mí</a></li>
+				<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#mis-proyectos" data-number="02">Mis proyectos</a></li>
+				<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#contacto" data-number="03">Contacto</a></li>
+			  </ul>
 			<div class="nav-center caja-ojo">
-				<a href="#inicio">
+				<a id="ir-arriba" href="#inicio" >
 					<div class="mini-ojo">
 						<div id="mini-punto" class="mini-punto"></div>
 						<img id="mini-ceja" class="mini-ceja" src="svg/lash-white.svg" alt="Ojo">
@@ -98,14 +98,14 @@
 				</a>
 			</div>
 			<div class="nav-right">
-				<div class="checkbox__container">
+				<div class="sub__nav-right checkbox__container animate__animated animate__bounceInRight">
 					<label class="switch">
 						<input id="theme" class="checkbox animate__animated animate__fadeInRight" type="checkbox" checked>
 						<span class="deslizante"></span>
 					</label>
 				</div>
-				<div class="idioma__container">
-					<img class="idioma" src="svg/global.svg" alt="Idioma">
+				<div class="sub__nav-right idioma__container animate__animated animate__bounceInRight">
+					<img class="idioma" src="svg/global-.svg" alt="Idioma">
 				</div>
 			</div>
 		</nav>
@@ -114,15 +114,15 @@
 	<main class="main">
 <!-- Inicio -->
 		<section id="inicio">
-			<div class="inicio__container">
+			<div class="x inicio__container">
 				<h1 class="descripcion-arriba">¿Qué tal? mi nombre es</h1>
-				<h1 class="title-1 gaby">Soy Gabriel <br> <span class="sub-gaby"> Soporte TI Trainee </span></h1>
+				<h1 class="title-1 title">Soy Gabriel <br> <span class="sub-gaby"> Soporte TI Trainee </span></h1>
 				<p class="descripcion">
 					Soy un desarrollador frontend, asimismo
 					creé este portafolios con el afán de mostrar mis habilidades.
 				</p>
 			</div>
-			<div class="inicio__container-ojo">
+			<div class="x  inicio__container-ojo">
 				<div class="ojo">
 					<div id="div-sonido" class="punto"></div>
 				</div>
@@ -130,9 +130,24 @@
 		</section>
 <!-- Sobre mí -->
 		<section id="sobre-mi">
-			<div class="card">
-				<img class="card-img" src="img/html.png" alt="HTML5">
+			<h2 class="title-2 sobre-mi__text">Sobre mí</h2>
+			<div class="sobre-mi__container">
+				<div role="tablist" id="botones" class="botones">
+					<button id="tab-0" tabindex="" role="tab" class="boton activo" data-contenido="Botón 1">Yo</button>
+					<button id="tab-1" tabindex="" role="tab" class="boton" data-contenido="Botón 2"><span>Lenguajes</span></button>
+					<button id="tab-2" tabindex="" role="tab" class="boton" data-contenido="Botón 3">Tecnologías</button>
+				</div>
+				<div id="contenido" class="card">
+					<div id="panel-0" tabindex="" role="tabpanel">
+						<img class="card-img" src="img/html.png" alt="HTML5">
+						<img class="card-img" src="img/css.png" alt="CSS3">
+						<img  class="card-img" src="img/javascript.png" alt="javaScript">
+					</div>
+					<div id="panel-1" tabindex="" role="tabpanel"></div>
+					<div id="panel-2" tabindex="" role="tabpanel"></div>
+				</div>
 			</div>
+			
 		</section>
 <!-- Mis proyectos -->
 		<section id="mis-proyectos">
