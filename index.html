@@ -62,195 +62,194 @@
 
 </head>
 <body class="body">
+	<!-- Elementos externos -->
+	<div class="externo">
+	<!-- Cursor -->
+		<div id="cursor__container" class="cursor__container">
+			<div id="cursor" class="cursor"></div>
+		</div>
 
-<!-- Cursor -->
-	<div id="cursor__container" class="cursor__container">
-		<div id="cursor" class="cursor"></div>
-	</div>
+	<!-- Audio -->
+		<audio id="audio">
+			<source src="sonidos/miau.mp3" type="audio/mpeg">
+			<source src="sonidos/miau.ogg" type="audio/ogg">
+			Tu navegador no soporta audio HTML5.
+		</audio>
 
-<!-- Audio -->
-	<audio id="audio">
-		<source src="sonidos/miau.mp3" type="audio/mpeg">
-		<source src="sonidos/miau.ogg" type="audio/ogg">
-		Tu navegador no soporta audio HTML5.
-	</audio>
-
-<!-- Preloader -->
-	<div class="preloader">
-		<div class="progress">
-			<div class="carga">
-				<div class="carga">
-					<div class="carga"></div>
-				</div>
+	<!-- Preloader -->
+		<div class="preloader">
+			<div class="preloader__inner">
+				<div class="preloader__eye"></div>
 			</div>
 		</div>
 	</div>
+	<div class="interno loading">
+		<!-- Cabezera -->
+		<header id="header" class="header">
+			<nav id="nav-container" class="nav-container">
+				<ul class="nav__list">
+					<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#sobre-mi" data-number="01">Sobre mí</a></li>
+					<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#mis-proyectos" data-number="02">Mis proyectos</a></li>
+					<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#contacto" data-number="03">Contacto</a></li>
+				</ul>
+				<div class="nav-center caja-ojo caja-ojo-oculto">
+					<a id="ir-arriba" class="ojito" href="#inicio" >
+						<div class="mini-ojo">
+							<div id="mini-punto" class="mini-punto"></div>
+							<img id="mini-ceja" class="mini-ceja" src="svg/lash-white.svg" alt="Ojo">
+						</div>
+					</a>
+				</div>
+				<div class="nav-right">
+					<div class="sub__nav-right checkbox__container animate__animated animate__bounceInRight">
+						<label class="switch">
+							<input id="theme" class="checkbox animate__animated animate__fadeInRight" type="checkbox">
+							<span class="deslizante"></span>
+						</label>
+					</div>
+					<div class="sub__nav-right idioma__container animate__animated animate__bounceInRight">
+						<div class="idioma">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+								<path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1Zm8 11c0 .7-.1 1.4-.3 2-.6-1.5-1.6-3.1-3-4.7l1.8-1.8c1 1.3 1.5 2.8 1.5 4.5ZM6.5 6.5c1.3 0 3.6.8 6 2.9l-3.2 3.2C7.1 9.8 6.5 7.5 6.5 6.5Zm8.1 5c2.3 2.7 2.9 5 2.9 6-1.3 0-3.6-.8-6-2.9l3.1-3.1Zm1.9-6.1-1.9 1.9c-1.6-1.4-3.2-2.4-4.7-3 .7-.2 1.3-.3 2-.3 1.8 0 3.3.5 4.6 1.4ZM4 12c0-.7.1-1.4.3-2 .6 1.5 1.6 3.1 3 4.7l-1.8 1.8C4.5 15.2 4 13.7 4 12Zm3.5 6.6 1.9-1.9c1.6 1.4 3.2 2.4 4.7 3-.7.2-1.3.3-2 .3-1.8 0-3.3-.5-4.6-1.4Z" fill="currentColor"></path>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!-- Contenido -->
+		<main class="main">
+		<!-- Inicio -->
+			<section id="inicio">
+				<div class="x inicio__container">
+					<h1 class="descripcion-arriba">¿Qué tal? soy</h1>
+					<h1 class="title-1 title">Gabriel Rojas<br> Soporte TI</h1>
+					<p class="descripcion">
+						Soy un desarrollador frontend, asimismo
+						creé este portafolios con el afán de mostrar mis habilidades.
+					</p>
+				</div>
+				<div class="x  inicio__container-ojo">
+					<div class="ojo">
+						<div id="div-sonido" class="punto"></div>
+					</div>
+				</div>
 
-<!-- Cabezera -->
-	<header id="header" class="header">
-		<nav id="nav-container" class="nav-container">
-			<ul class="nav__list">
-				<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#sobre-mi" data-number="01">Sobre mí</a></li>
-				<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#mis-proyectos" data-number="02">Mis proyectos</a></li>
-				<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#contacto" data-number="03">Contacto</a></li>
-			  </ul>
-			<div class="nav-center caja-ojo caja-ojo-oculto">
-				<a id="ir-arriba" class="ojito" href="#inicio" >
-					<div class="mini-ojo">
-						<div id="mini-punto" class="mini-punto"></div>
-						<img id="mini-ceja" class="mini-ceja" src="svg/lash-white.svg" alt="Ojo">
+			</section>
+		<!-- Sobre mí -->
+			<section id="sobre-mi">
+				<h2 class="title-2 sobre-mi__text">Sobre mí</h2>
+				<div class="sobre-mi__container">
+					<div role="tablist" id="botones" class="botones">
+						<button id="tab-0" tabindex="" role="tab" class="boton activo" data-contenido="Botón 1">Yo</button>
+						<button id="tab-1" tabindex="" role="tab" class="boton" data-contenido="Botón 2"><span>Lenguajes</span></button>
+						<button id="tab-2" tabindex="" role="tab" class="boton" data-contenido="Botón 3">Tecnologías</button>
 					</div>
-				</a>
-			</div>
-			<div class="nav-right">
-				<div class="sub__nav-right checkbox__container animate__animated animate__bounceInRight">
-					<label class="switch">
-						<input id="theme" class="checkbox animate__animated animate__fadeInRight" type="checkbox">
-						<span class="deslizante"></span>
-					</label>
-				</div>
-				<div class="sub__nav-right idioma__container animate__animated animate__bounceInRight">
-					<div class="idioma">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-							<path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1Zm8 11c0 .7-.1 1.4-.3 2-.6-1.5-1.6-3.1-3-4.7l1.8-1.8c1 1.3 1.5 2.8 1.5 4.5ZM6.5 6.5c1.3 0 3.6.8 6 2.9l-3.2 3.2C7.1 9.8 6.5 7.5 6.5 6.5Zm8.1 5c2.3 2.7 2.9 5 2.9 6-1.3 0-3.6-.8-6-2.9l3.1-3.1Zm1.9-6.1-1.9 1.9c-1.6-1.4-3.2-2.4-4.7-3 .7-.2 1.3-.3 2-.3 1.8 0 3.3.5 4.6 1.4ZM4 12c0-.7.1-1.4.3-2 .6 1.5 1.6 3.1 3 4.7l-1.8 1.8C4.5 15.2 4 13.7 4 12Zm3.5 6.6 1.9-1.9c1.6 1.4 3.2 2.4 4.7 3-.7.2-1.3.3-2 .3-1.8 0-3.3-.5-4.6-1.4Z" fill="currentColor"></path>
-						</svg>
+					<div id="contenido" class="card">
+						<div id="panel-0" tabindex="" role="tabpanel">
+							<img class="card-img" src="img/html.png" alt="HTML5">
+							<img class="card-img" src="img/css.png" alt="CSS3">
+							<img  class="card-img" src="img/javascript.png" alt="javaScript">
+						</div>
+						<div id="panel-1" tabindex="" role="tabpanel"></div>
+						<div id="panel-2" tabindex="" role="tabpanel"></div>
 					</div>
 				</div>
-			</div>
-		</nav>
-	</header>
-<!-- Contenido -->
-	<main class="main">
-<!-- Inicio -->
-		<section id="inicio">
-			<div class="x inicio__container">
-				<h1 class="descripcion-arriba">¿Qué tal? soy</h1>
-				<h1 class="title-1 title">Gabriel Rojas<br> Soporte TI</h1>
-				<p class="descripcion">
-					Soy un desarrollador frontend, asimismo
-					creé este portafolios con el afán de mostrar mis habilidades.
-				</p>
-			</div>
-			<div class="x  inicio__container-ojo">
-				<div class="ojo">
-					<div id="div-sonido" class="punto"></div>
-				</div>
-			</div>
-
-		</section>
-<!-- Sobre mí -->
-		<section id="sobre-mi">
-			<h2 class="title-2 sobre-mi__text">Sobre mí</h2>
-			<div class="sobre-mi__container">
-				<div role="tablist" id="botones" class="botones">
-					<button id="tab-0" tabindex="" role="tab" class="boton activo" data-contenido="Botón 1">Yo</button>
-					<button id="tab-1" tabindex="" role="tab" class="boton" data-contenido="Botón 2"><span>Lenguajes</span></button>
-					<button id="tab-2" tabindex="" role="tab" class="boton" data-contenido="Botón 3">Tecnologías</button>
-				</div>
-				<div id="contenido" class="card">
-					<div id="panel-0" tabindex="" role="tabpanel">
-						<img class="card-img" src="img/html.png" alt="HTML5">
-						<img class="card-img" src="img/css.png" alt="CSS3">
-						<img  class="card-img" src="img/javascript.png" alt="javaScript">
-					</div>
-					<div id="panel-1" tabindex="" role="tabpanel"></div>
-					<div id="panel-2" tabindex="" role="tabpanel"></div>
-				</div>
-			</div>
-			
-		</section>
-<!-- Mis proyectos -->
-		<section id="mis-proyectos">
-			<!-- Carrusel -->
-			<h2  class="title-2 mis-proyectos__text">Mis proyectos</h2>
-			<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-				<div class="gallery-cell atroposes">
-					<!-- main Atropos container (required), add your custom class here -->
-					<div class="atropos my-atropos">
-						<!-- scale container (required) -->
-						<div class="atropos-scale">
-							<!-- rotate container (required) -->
-							<div class="atropos-rotate">
-								<!-- inner container (required) -->
-								<div class="atropos-inner">
-								<!-- put your custom content here -->
-									<img class="img-atropos" src="img/proyecto3.png" data-atropos-offset="-5" style="width: 100%;">
-									<div class="atropos__container" data-atropos-opacity="0;100%"> 
-										<!-- data-atropos-offset="0" -->
-										<h1 class="title-1-atropos">Proyecto de lotes</h1>
-										<a class="a-atropos" href="https://cañuelassur.com"><h3 class="title-3-atropos">Ingresar al proyecto</h1></a>
+				
+			</section>
+		<!-- Mis proyectos -->
+			<section id="mis-proyectos">
+				<!-- Carrusel -->
+				<h2  class="title-2 mis-proyectos__text">Mis proyectos</h2>
+				<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+					<div class="gallery-cell atroposes">
+						<!-- main Atropos container (required), add your custom class here -->
+						<div class="atropos my-atropos">
+							<!-- scale container (required) -->
+							<div class="atropos-scale">
+								<!-- rotate container (required) -->
+								<div class="atropos-rotate">
+									<!-- inner container (required) -->
+									<div class="atropos-inner">
+									<!-- put your custom content here -->
+										<img class="img-atropos" src="img/proyecto3.png" data-atropos-offset="-5" style="width: 100%;">
+										<div class="atropos__container" data-atropos-opacity="0;100%"> 
+											<!-- data-atropos-offset="0" -->
+											<h1 class="title-1-atropos">Proyecto de lotes</h1>
+											<a class="a-atropos" href="https://cañuelassur.com"><h3 class="title-3-atropos">Ingresar al proyecto</h1></a>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="gallery-cell atroposes">
-					<!-- main Atropos container (required), add your custom class here -->
-					<div class="atropos my-second-atropos">
-						<!-- scale container (required) -->
-						<div class="atropos-scale">
-							<!-- rotate container (required) -->
-							<div class="atropos-rotate">
-								<!-- inner container (required) -->
-								<div class="atropos-inner">
-								<!-- put your custom content here -->
-									<img class="img-atropos" src="img/proyecto2.png" data-atropos-offset="-5" style="width: 100%;">
-									<div class="atropos__container" data-atropos-opacity="0;100%"> 
-										<!-- data-atropos-offset="0" -->
-										<h1 class="title-1-atropos">Proyecto de quintas</h1>
-										<a class="a-atropos" href="https://alquintas.com"><h3 class="title-3-atropos">Ingresar al proyecto</h1></a>
+					<div class="gallery-cell atroposes">
+						<!-- main Atropos container (required), add your custom class here -->
+						<div class="atropos my-second-atropos">
+							<!-- scale container (required) -->
+							<div class="atropos-scale">
+								<!-- rotate container (required) -->
+								<div class="atropos-rotate">
+									<!-- inner container (required) -->
+									<div class="atropos-inner">
+									<!-- put your custom content here -->
+										<img class="img-atropos" src="img/proyecto2.png" data-atropos-offset="-5" style="width: 100%;">
+										<div class="atropos__container" data-atropos-opacity="0;100%"> 
+											<!-- data-atropos-offset="0" -->
+											<h1 class="title-1-atropos">Proyecto de quintas</h1>
+											<a class="a-atropos" href="https://alquintas.com"><h3 class="title-3-atropos">Ingresar al proyecto</h1></a>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="gallery-cell atroposes">
-					<!-- main Atropos container (required), add your custom class here -->
-					<div class="atropos my-third-atropos">
-						<!-- scale container (required) -->
-						<div class="atropos-scale">
-							<!-- rotate container (required) -->
-							<div class="atropos-rotate">
-								<!-- inner container (required) -->
-								<div class="atropos-inner">
-								<!-- put your custom content here -->
-									<img class="img-atropos" src="img/proyecto3.png" data-atropos-offset="-5" style="width: 100%;">
-									<div class="atropos__container" data-atropos-opacity="0;100%"> 
-										<!-- data-atropos-offset="0" -->
-										<h1 class="title-1-atropos">Proyecto de lotes</h1>
-										<a class="a-atropos" href="https://cañuelassur.com"><h3 class="title-3-atropos">Ingresar al proyecto</h1></a>
+					<div class="gallery-cell atroposes">
+						<!-- main Atropos container (required), add your custom class here -->
+						<div class="atropos my-third-atropos">
+							<!-- scale container (required) -->
+							<div class="atropos-scale">
+								<!-- rotate container (required) -->
+								<div class="atropos-rotate">
+									<!-- inner container (required) -->
+									<div class="atropos-inner">
+									<!-- put your custom content here -->
+										<img class="img-atropos" src="img/proyecto3.png" data-atropos-offset="-5" style="width: 100%;">
+										<div class="atropos__container" data-atropos-opacity="0;100%"> 
+											<!-- data-atropos-offset="0" -->
+											<h1 class="title-1-atropos">Proyecto de lotes</h1>
+											<a class="a-atropos" href="https://cañuelassur.com"><h3 class="title-3-atropos">Ingresar al proyecto</h1></a>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+			</section>
+		<!-- Contacto -->
+			<section id="contacto">
+				<div class="contacto__container">
+					<h2  class="title-2 contacto__text">Contacto</h2>
+					<form class="form" action="sumbit">
+						<input class="form__input" type="text">
+						<input class="form__input" type="email">
+						<textarea class="form__input form__textarea" name="textarea" id="" cols="30" rows="10"></textarea>
+						<input class="form__input form__submit" type="submit">
+					</form>	
 				</div>
-		</section>
-<!-- Contacto -->
-		<section id="contacto">
-			<div class="contacto__container">
-				<h2  class="title-2 contacto__text">Contacto</h2>
-				<form class="form" action="sumbit">
-					<input class="form__input" type="text">
-					<input class="form__input" type="email">
-					<textarea class="form__input form__textarea" name="textarea" id="" cols="30" rows="10"></textarea>
-					<input class="form__input form__submit" type="submit">
-				</form>	
-			</div>
-		</section>
-	</main>
-<!-- Pie de página -->
-	<footer class="footer">
-		<nav class="footer__nav">
-			<ul class="nav__list">
-				<li class="nav__item"><a class="social-item" href="https://www.instagram.com/elgabyxo/">Instagram</a></li>
-				<li class="nav__item"><a class="social-item" href="https://github.com/DarkenBlood">GitHub</a></li>
-				<li class="nav__item"><a class="social-item" href="https://www.linkedin.com/in/gabriel-johann-rojas/">Linkedin</a></li>
-			</ul>
-		</nav>
-	</footer>
+			</section>
+		</main>
+		<!-- Pie de página -->
+		<footer class="footer">
+			<nav class="footer__nav">
+				<ul class="nav__list">
+					<li class="nav__item"><a class="social-item" href="https://www.instagram.com/elgabyxo/">Instagram</a></li>
+					<li class="nav__item"><a class="social-item" href="https://github.com/DarkenBlood">GitHub</a></li>
+					<li class="nav__item"><a class="social-item" href="https://www.linkedin.com/in/gabriel-johann-rojas/">Linkedin</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
 <!-- Scripts -->
 	<script src="flickity/flickity.pkgd.min.js"></script>
 	<script src="atropos/atropos.min.js"></script>

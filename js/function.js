@@ -189,35 +189,32 @@ window.addEventListener('focus', () => {
 
 
 // Carga
-const preloader = document.querySelector(".preloader");
-
-window.addEventListener("load", () => {
-    preloader.classList.add("fadeOut");
-});
-
 // const preloader = document.querySelector(".preloader");
-// const progress = document.querySelector(".progress");
-// const duration = 1000;
-// let startTime;
-
-// function setProgress(time) {
-//   const elapsed = Date.now() - startTime;
-//   const progressWidth = elapsed / time * 100;
-//   progress.style.width = `${progressWidth}%`;
-// }
 
 // window.addEventListener("load", () => {
-//   startTime = Date.now();
-//   setProgress(duration);
-  
-//   setTimeout(() => {
 //     preloader.classList.add("fadeOut");
-//   }, duration);
-  
-//   setInterval(() => {
-//     setProgress(duration);
-//   }, 100);
 // });
+
+
+window.addEventListener("load", () => {
+	const preloader = document.querySelector(".preloader");
+	const contenido = document.querySelector(".interno");
+	setTimeout(() => {
+		contenido.classList.remove("loading");
+	  	preloader.classList.add("fadeOut");
+	}, 2000);
+});
+
+// window.addEventListener("load", () => {
+// 	const preloader = document.querySelector(".preloader");
+// 	setTimeout(() => {
+// 	  document.body.classList.remove("loading");
+// 	  preloader.classList.add("fadeOut");
+// 	  setTimeout(() => {
+// 		preloader.style.display = "none";
+// 	  }, 1000);
+// 	}, 1000);
+//   });
 
 
 // #Inicio
