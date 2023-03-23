@@ -222,3 +222,46 @@ function cambiarContenido(contenidoId) {
   // Cambiar el contenido según el ID
   // ...
 }
+
+const myAtropos = Atropos({
+	el: '.my-atropos',
+	// Parámetros
+	// rotateLock: true,
+	// rotateXMax: 15,
+	// rotateYMax: 15,
+	// shadow: true,
+	// shadowOffset: 10,
+	// shadowScale: 0.8,
+	// highlight: false,
+	// durationEnter: 600,
+	// activeOffset: 60
+	durationEnter: 500,
+	rotateXMax: 15,
+	rotateYMax: 15,
+	highlight: false,
+	rotateLock: true,
+	alwaysActive: true,
+	shadow: true,
+	shadowOffset: 800,
+	// shadowScale: 0.5,
+});
+
+const mySecondAtropos = Atropos({
+    el: '.my-second-atropos',
+	// Parámetros
+	highlight: false,
+	rotateLock: true,
+	alwaysActive: true,
+	shadow: true,
+	shadowOffset: 20,
+});
+
+const myThirdAtropos = Atropos({
+    el: '.my-third-atropos',
+	// Parámetros
+	highlight: false,
+	rotateLock: true,
+	alwaysActive: true,
+	shadow: true,
+	shadowOffset: 20,
+});

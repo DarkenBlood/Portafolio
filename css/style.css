@@ -354,7 +354,7 @@ html{
     display: none;
 }
 
-.deslizante:before {
+.deslizante::before {
     display: block;
 
     content: '';
@@ -369,7 +369,7 @@ html{
     background-color: transparent;
 }
 
-.checkbox:checked + .deslizante:before {
+.checkbox:checked + .deslizante::before {
     background: transparent;
     box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
@@ -411,7 +411,7 @@ html{
     display: flex;
     flex-direction: column;
     justify-content: start;
-    width: 500px;
+    width: 600px;
 
     animation: container-ojo .6s 1s forwards;
 }
@@ -459,8 +459,8 @@ html{
     background-color: #000000;
     
     border-radius: 20px;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     animation: container-ojo 1s 1.5s forwards;
 }
 
@@ -676,8 +676,6 @@ html{
 
 /* Estilos de la sección de mis proyectos */
 #mis-proyectos {
-    display: flex;
-    align-items: center;
     height: 100vh;
     color: #ffffff;
 }
@@ -686,40 +684,21 @@ section{
     outline: 2px solid white;
 }
 
-/* GRID CONTACTO */
-/* .grid__container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: #8312e0;
-}
-  
-.grid__item {
-    background-color: #fffc4d;
-    display: flex;
-    justify-content: center;
-    width: 70%;
-    margin: 0 auto;
-    border-radius: 15px;
-}
-
-.grid__img {
-    filter: brightness(50%);
-} */
-
+/* Atropos */
 .atroposes {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.my-atropos{
-    width: 50%;
+.my-atropos, .my-second-atropos, .my-third-atropos{ 
+    width: 70%;
 }
-
 
 .atropos-inner{
     padding: 20px 50px;
+    display: flex;
+    
 }
 
 .img-atropos{
@@ -895,5 +874,35 @@ section{
 }
 
 @keyframes carga {
-    to{transform: rotate(360deg);}
+    to{ transform: rotate(360deg);}
+}
+
+.gallery {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 500px;
+
+    background-color: transparent;
+}
+
+/* Proycto */
+.gallery-cell {
+    width: 66%;
+    height: 500px;
+    margin-right: 10px;
+    background-color: transparent;
+    counter-increment: gallery-cell;
+}
+  
+/* Proycto::before */
+.gallery-cell::before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: #8983f7;
 }
