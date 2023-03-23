@@ -77,9 +77,11 @@
 
 <!-- Preloader -->
 	<div class="preloader">
-		<div class="carga">
+		<div class="progress">
 			<div class="carga">
-				<div class="carga"></div>
+				<div class="carga">
+					<div class="carga"></div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -92,8 +94,8 @@
 				<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#mis-proyectos" data-number="02">Mis proyectos</a></li>
 				<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#contacto" data-number="03">Contacto</a></li>
 			  </ul>
-			<div class="nav-center caja-ojo">
-				<a id="ir-arriba" href="#inicio" >
+			<div class="nav-center caja-ojo caja-ojo-oculto">
+				<a id="ir-arriba" class="ojito" href="#inicio" >
 					<div class="mini-ojo">
 						<div id="mini-punto" class="mini-punto"></div>
 						<img id="mini-ceja" class="mini-ceja" src="svg/lash-white.svg" alt="Ojo">
@@ -103,12 +105,16 @@
 			<div class="nav-right">
 				<div class="sub__nav-right checkbox__container animate__animated animate__bounceInRight">
 					<label class="switch">
-						<input id="theme" class="checkbox animate__animated animate__fadeInRight" type="checkbox" checked>
+						<input id="theme" class="checkbox animate__animated animate__fadeInRight" type="checkbox">
 						<span class="deslizante"></span>
 					</label>
 				</div>
 				<div class="sub__nav-right idioma__container animate__animated animate__bounceInRight">
-					<div class="idioma"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1Zm8 11c0 .7-.1 1.4-.3 2-.6-1.5-1.6-3.1-3-4.7l1.8-1.8c1 1.3 1.5 2.8 1.5 4.5ZM6.5 6.5c1.3 0 3.6.8 6 2.9l-3.2 3.2C7.1 9.8 6.5 7.5 6.5 6.5Zm8.1 5c2.3 2.7 2.9 5 2.9 6-1.3 0-3.6-.8-6-2.9l3.1-3.1Zm1.9-6.1-1.9 1.9c-1.6-1.4-3.2-2.4-4.7-3 .7-.2 1.3-.3 2-.3 1.8 0 3.3.5 4.6 1.4ZM4 12c0-.7.1-1.4.3-2 .6 1.5 1.6 3.1 3 4.7l-1.8 1.8C4.5 15.2 4 13.7 4 12Zm3.5 6.6 1.9-1.9c1.6 1.4 3.2 2.4 4.7 3-.7.2-1.3.3-2 .3-1.8 0-3.3-.5-4.6-1.4Z" fill="currentColor"></path></svg></div>
+					<div class="idioma">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+							<path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1Zm8 11c0 .7-.1 1.4-.3 2-.6-1.5-1.6-3.1-3-4.7l1.8-1.8c1 1.3 1.5 2.8 1.5 4.5ZM6.5 6.5c1.3 0 3.6.8 6 2.9l-3.2 3.2C7.1 9.8 6.5 7.5 6.5 6.5Zm8.1 5c2.3 2.7 2.9 5 2.9 6-1.3 0-3.6-.8-6-2.9l3.1-3.1Zm1.9-6.1-1.9 1.9c-1.6-1.4-3.2-2.4-4.7-3 .7-.2 1.3-.3 2-.3 1.8 0 3.3.5 4.6 1.4ZM4 12c0-.7.1-1.4.3-2 .6 1.5 1.6 3.1 3 4.7l-1.8 1.8C4.5 15.2 4 13.7 4 12Zm3.5 6.6 1.9-1.9c1.6 1.4 3.2 2.4 4.7 3-.7.2-1.3.3-2 .3-1.8 0-3.3-.5-4.6-1.4Z" fill="currentColor"></path>
+						</svg>
+					</div>
 				</div>
 			</div>
 		</nav>
@@ -130,6 +136,7 @@
 					<div id="div-sonido" class="punto"></div>
 				</div>
 			</div>
+
 		</section>
 <!-- Sobre mí -->
 		<section id="sobre-mi">
@@ -155,6 +162,7 @@
 <!-- Mis proyectos -->
 		<section id="mis-proyectos">
 			<!-- Carrusel -->
+			<h2  class="title-2 mis-proyectos__text">Mis proyectos</h2>
 			<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
 				<div class="gallery-cell atroposes">
 					<!-- main Atropos container (required), add your custom class here -->
@@ -223,13 +231,13 @@
 <!-- Contacto -->
 		<section id="contacto">
 			<div class="contacto__container">
-				<h2  class="title-2">Contacto</h2>
+				<h2  class="title-2 contacto__text">Contacto</h2>
 				<form class="form" action="sumbit">
 					<input class="form__input" type="text">
 					<input class="form__input" type="email">
 					<textarea class="form__input form__textarea" name="textarea" id="" cols="30" rows="10"></textarea>
 					<input class="form__input form__submit" type="submit">
-				</form>
+				</form>	
 			</div>
 		</section>
 	</main>
@@ -237,11 +245,9 @@
 	<footer class="footer">
 		<nav class="footer__nav">
 			<ul class="nav__list">
-				<li class="nav__item">Instagram</li>
-				<li class="nav__item">GitHub</li>
-				<li class="nav__item">Linkedin</li>
-				<li class="nav__item"></li>
-				<li class="nav__item"></li>
+				<li class="nav__item"><a class="social-item" href="https://www.instagram.com/elgabyxo/">Instagram</a></li>
+				<li class="nav__item"><a class="social-item" href="https://github.com/DarkenBlood">GitHub</a></li>
+				<li class="nav__item"><a class="social-item" href="https://www.linkedin.com/in/gabriel-johann-rojas/">Linkedin</a></li>
 			</ul>
 		</nav>
 	</footer>

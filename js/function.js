@@ -52,7 +52,7 @@ if (!isTouch){
 	};
 
 	const handleLinkHoverEvents = () => {
-		document.querySelectorAll('a, button, .js-link, input[type="button"], input[type="submit"], .checkbox__container, .mini-ojo, .idioma__container').forEach((el) => {
+		document.querySelectorAll('a, button, input, textarea, .checkbox__container, .mini-ojo, .punto, .idioma__container').forEach((el) => {
 			el.addEventListener("mouseover", () => {
 				cursorEl.classList.add(isLinkHoveredClass);
 				miniCeja.classList.add('active-ceja');
@@ -76,27 +76,41 @@ if (!isTouch){
 
 
 //Checkbox
-const checkbox = document.getElementById('theme');
 const body = document.body;
-const header = document.getElementById('nav-container');
+const checkbox = document.getElementById('theme');
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme) {
+	body.classList.add(savedTheme);
+	checkbox.checked = savedTheme === 'light-theme';
+	if (savedTheme === 'default-theme') {
+	  localStorage.removeItem('theme');
+	  checkbox.setAttribute('checked', true);
+
+	} else {
+		checkbox.removeAttribute('checked');
+	}
+} else {
+	localStorage.setItem('theme', 'dark-theme');
+	body.classList.add('dark-theme');
+}
 
 checkbox.addEventListener('change', () => {
-  if (!this.checked) {
-	//Body light
-    body.classList.toggle('light-theme');
-
-	//Nav light
-	// header.classList.remove("dark-container");
-	// header.classList.add("light-container");
-  } else {
+  if (!checkbox.checked) {
 	//Body dark
-	body.classList.rtoggle('light-theme');
-
-	//Nav dark
-	// header.classList.remove("light-container");
-	// header.classList.add("dark-container");
+	body.classList.replace('light-theme', 'dark-theme');
+    localStorage.setItem('theme', 'dark-theme');
+	
+  } else {
+	//Body light
+    body.classList.replace('dark-theme', 'light-theme');
+    localStorage.setItem('theme', 'light-theme');
+	checkbox.setAttribute('checked', true);
   }
 });
+
+
+
 
 
 //Ojo - movimiento
@@ -113,17 +127,15 @@ if (punto) {
   }
 }
 
-
+// 
 // Ojo - Aparición
-const cajaOjo = document.querySelector('.caja-ojo');
+const miniOjo = document.querySelector('.caja-ojo');
 
 window.addEventListener('scroll', function() {
   if (window.pageYOffset > 500) {
-    cajaOjo.classList.remove('caja-ojo-oculto');
-    cajaOjo.classList.add('caja-ojo-visible');
+	miniOjo.classList.replace('caja-ojo-oculto', 'caja-ojo-visible');
   } else {
-    cajaOjo.classList.remove('caja-ojo-visible');
-    cajaOjo.classList.add('caja-ojo-oculto');
+	miniOjo.classList.replace('caja-ojo-visible', 'caja-ojo-oculto');
   }
 });
 
@@ -183,6 +195,30 @@ window.addEventListener("load", () => {
     preloader.classList.add("fadeOut");
 });
 
+// const preloader = document.querySelector(".preloader");
+// const progress = document.querySelector(".progress");
+// const duration = 1000;
+// let startTime;
+
+// function setProgress(time) {
+//   const elapsed = Date.now() - startTime;
+//   const progressWidth = elapsed / time * 100;
+//   progress.style.width = `${progressWidth}%`;
+// }
+
+// window.addEventListener("load", () => {
+//   startTime = Date.now();
+//   setProgress(duration);
+  
+//   setTimeout(() => {
+//     preloader.classList.add("fadeOut");
+//   }, duration);
+  
+//   setInterval(() => {
+//     setProgress(duration);
+//   }, 100);
+// });
+
 
 // #Inicio
 const enlaceInicio = document.getElementById("ir-arriba");
@@ -214,7 +250,7 @@ botones.forEach(boton => {
 
     // Cambiar la clase activo en los botones
     botones.forEach(boton => boton.classList.remove('activo'));
-    boton.classList.add('activo');
+    boton.classList.toggle('activo');
   });
 });
 
@@ -236,8 +272,8 @@ const myAtropos = Atropos({
 	// durationEnter: 600,
 	// activeOffset: 60
 	durationEnter: 500,
-	rotateXMax: 15,
-	rotateYMax: 15,
+	rotateXMax: 35,
+	rotateYMax: 35,
 	highlight: false,
 	rotateLock: true,
 	alwaysActive: true,
