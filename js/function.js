@@ -57,13 +57,13 @@ if (!isTouch){
 				cursorEl.classList.add(isLinkHoveredClass);
 				miniCeja.classList.add('active-ceja');
 				miniPunto.classList.add('active-punto');
-			  });
-			  el.addEventListener("mouseout", () => {
+			});
+			el.addEventListener("mouseout", () => {
 				cursorEl.classList.remove(isLinkHoveredClass);
 				miniCeja.classList.remove('active-ceja');
 				miniPunto.classList.remove('active-punto');
-			  });
 			});
+		});
 	};
 
 	addEventListeners();
@@ -84,8 +84,8 @@ if (savedTheme) {
 	body.classList.add(savedTheme);
 	checkbox.checked = savedTheme === 'light-theme';
 	if (savedTheme === 'default-theme') {
-	  localStorage.removeItem('theme');
-	  checkbox.setAttribute('checked', true);
+		localStorage.removeItem('theme');
+		checkbox.setAttribute('checked', true);
 
 	} else {
 		checkbox.removeAttribute('checked');
@@ -96,17 +96,16 @@ if (savedTheme) {
 }
 
 checkbox.addEventListener('change', () => {
-  if (!checkbox.checked) {
-	//Body dark
-	body.classList.replace('light-theme', 'dark-theme');
-    localStorage.setItem('theme', 'dark-theme');
-	
-  } else {
-	//Body light
-    body.classList.replace('dark-theme', 'light-theme');
-    localStorage.setItem('theme', 'light-theme');
-	checkbox.setAttribute('checked', true);
-  }
+	if (!checkbox.checked) {
+		//Body dark
+		body.classList.replace('light-theme', 'dark-theme');
+    	localStorage.setItem('theme', 'dark-theme');
+	} else {
+		//Body light
+    	body.classList.replace('dark-theme', 'light-theme');
+    	localStorage.setItem('theme', 'light-theme');
+		checkbox.setAttribute('checked', true);
+	}
 });
 
 
@@ -117,14 +116,13 @@ checkbox.addEventListener('change', () => {
 const punto = document.querySelector('.mini-punto');
 
 if (punto) {
-  document.onmousemove = function(event){
-    const x = event.clientX * 100 / window.innerWidth + '%';
-    const y = event.clientY * 100 / window.innerHeight + '%';
-
-    punto.style.left = x;
-    punto.style.top = y;
-    punto.style.transform = `translate3d(-${x}, -${y}, 0)`;
-  }
+	document.onmousemove = function(event){
+    	const x = event.clientX * 100 / window.innerWidth + '%';
+    	const y = event.clientY * 100 / window.innerHeight + '%';
+    	punto.style.left = x;
+    	punto.style.top = y;
+    	punto.style.transform = `translate3d(-${x}, -${y}, 0)`;
+	}
 }
 
 // 
@@ -132,11 +130,11 @@ if (punto) {
 const miniOjo = document.querySelector('.caja-ojo');
 
 window.addEventListener('scroll', function() {
-  if (window.pageYOffset > 500) {
-	miniOjo.classList.replace('caja-ojo-oculto', 'caja-ojo-visible');
-  } else {
-	miniOjo.classList.replace('caja-ojo-visible', 'caja-ojo-oculto');
-  }
+	if (window.pageYOffset > 500) {
+		miniOjo.classList.replace('caja-ojo-oculto', 'caja-ojo-visible');
+	} else {
+		miniOjo.classList.replace('caja-ojo-visible', 'caja-ojo-oculto');
+	}
 });
 
 
@@ -145,7 +143,7 @@ const audio = document.getElementById('audio');
 const divSonido = document.getElementById('div-sonido');
 
 divSonido.addEventListener('click', function() {
-  audio.play();
+	audio.play();
 });
 
 
@@ -154,11 +152,11 @@ const defaultTitle = document.title;
 const blurTitle = '¡No te vayas!';
 
 window.addEventListener('blur', () => {
-  document.title = blurTitle;
+	document.title = blurTitle;
 });
 
 window.addEventListener('focus', () => {
-  document.title = defaultTitle;
+	document.title = defaultTitle;
 });
 
 
@@ -201,7 +199,8 @@ window.addEventListener("load", () => {
 	const contenido = document.querySelector(".interno");
 	setTimeout(() => {
 		contenido.classList.remove("loading");
-	  	preloader.classList.add("fadeOut");
+		preloader.classList.add("fadeOut");
+		preloader.classList.remove("preloader");
 	}, 2000);
 });
 

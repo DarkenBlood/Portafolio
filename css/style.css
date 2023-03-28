@@ -242,7 +242,7 @@ html {
     transform: translate(-50%, -20px) scaleY(0);
     transition: opacity .3s ease-in-out, transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-  
+
 .active-ceja {
     opacity: 1;
     transform: translate(-50%, -30px) scaleY(1);
@@ -379,16 +379,16 @@ html {
     background: transparent;
     transition: .4s;
     box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
-  }
-  
-  .checkbox:checked + .deslizante {
+}
+
+.checkbox:checked + .deslizante {
     background-color: linear-gradient(40deg,#ff0080,#ff8c00 70%);
-  }
-  
-  .checkbox:checked + .deslizante::before {
+}
+
+.checkbox:checked + .deslizante::before {
     background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
     box-shadow: none;
-  }
+}
 
 /* Estilos de la sección inicio */
 #inicio {
@@ -396,29 +396,26 @@ html {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    text-align: center;
-    padding: 50px;
     height: var(--pantalla);
-    color: #ffffff;
 }
 
-/* .x{
-    flex: 1;
-    min-width: 250px;
+.inicio-container {
+    
 }
 
-.x:first-child{
-    flex: 2;
-    margin: 20px;
-    margin-bottom: 0;
-} */
+@media screen and (max-width: 1000px) {
+    #inicio {
+        padding: 50px;
+        align-items: stretch;
+    }
 
-@media screen and (max-width: 700px) {
-    .inicio__container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .inicio-container {
+        flex: 2;
+        min-height: 0 !important;
+    }
+    
+    .ojo {
+        flex-basis: 100px;
     }
 }
 
@@ -427,7 +424,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    width: 600px;
+    flex-basis: 600px;
 
     animation: container-ojo .6s 1s forwards;
 }
@@ -475,8 +472,8 @@ html {
     background-color: #191919;
     
     border-radius: 20px;
-    width: 555px;
-    height: 555px;
+    flex-basis: 600px;
+    min-height: 600px;
     animation: container-ojo 1s 1.5s forwards;
 }
 
@@ -495,7 +492,7 @@ html {
     align-items: center;
     
     border-radius: 50%;
-    width: 275px;
+    flex-basis: 275px;
     height: 175px;
 
     background-color: #ffffff;
@@ -648,29 +645,29 @@ html {
     background-size: 50%;
     background-position: left center;
     transition: background-size 0.3s ease, background-color 0.3s ease, background-position-x 0.3s ease;
-  }
-  
-  .boton.activo {
+}
+
+.boton.activo {
     background-color: rgba(155, 71, 211, 0.3);
     background-size: 100% 100%;
     background-position-x: -100%;
     animation: llenarFondo 1s;
-  }
-  
-  .boton.inactivo {
+}
+
+.boton.inactivo {
     background-size: 0% 100%;
     background-position-x: 0%;
-  }
+}
 
-  @keyframes llenarFondo {
+@keyframes llenarFondo {
     from {
-      background-size: 0% 100%;
+        background-size: 0% 100%;
     }
     to {
-      background-size: 100% 100%;
+        background-size: 100% 100%;
     }
-  }
-  
+}
+
 .card {
     border-radius: 20px;
     padding: 40px;
@@ -862,10 +859,6 @@ section {
     color: #8983f7;
 }
 
-/* EXTRA */
-
-
-
 /* Estilos del scroll */
 ::-webkit-scrollbar {
     width: 0.6rem;
@@ -886,8 +879,6 @@ section {
     background-color: #141414;
 }
 
-
-
 /* Preloader */
 .preloader {
     position: fixed;
@@ -900,14 +891,14 @@ section {
     opacity: 1;
     transition: opacity 1s ease-out;
 }
-  
+
 .preloader__inner {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-  
+
 .preloader__eye {
     border-radius: 50%;
     width: 275px;
@@ -916,7 +907,7 @@ section {
     background-color: #ffffff;
     animation: eye-float 2s ease-in-out infinite;
 }
-  
+
 .preloader__eye:before {
     content: '';
     display: block;
@@ -933,17 +924,16 @@ section {
 .loading {
     display: none;
 }
-  
 
 @keyframes eye-float {
     0% {
-      transform: translate(0, 0);
+        transform: translate(0, 0);
     }
     50% {
-      transform: translate(0, 10px);
+        transform: translate(0, 10px);
     }
     100% {
-      transform: translate(0, 0);
+        transform: translate(0, 0);
     }
 }
 
@@ -953,10 +943,10 @@ section {
 
 @keyframes fadeOut {
     0% {
-      transform: translate(0) scale(8);
+        transform: translate(0) scale(8);
     }
     100% {
-      transform: translateY(-100%);
+        transform: translateY(-100%);
     }
 }
 
@@ -1010,7 +1000,7 @@ section {
     background-color: transparent;
     counter-increment: gallery-cell;
 }
-  
+
 /* Proycto::before */
 .gallery-cell::before {
     display: block;
