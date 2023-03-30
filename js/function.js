@@ -200,7 +200,6 @@ window.addEventListener("load", () => {
 	setTimeout(() => {
 		contenido.classList.remove("loading");
 		preloader.classList.add("fadeOut");
-		preloader.classList.remove("preloader");
 	}, 2000);
 });
 

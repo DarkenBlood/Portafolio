@@ -55,9 +55,9 @@ a{
     color: inherit;
 }
 
-p a{
+/* p a{
     display: inline;
-}
+} */
 
 /* Modificamos anclas suaves */
 html{
@@ -65,21 +65,21 @@ html{
 }
 
 /* Desactivamos estilos por defecto de etiquetas de texto */
-h1, h2, h3, h4, h5, h6, span, p, a, strong, blockquote, i, b, u, em{
+/* h1, h2, h3, h4, h5, h6, span, p, a, strong, blockquote, i, b, u, em{
     font-size: 1em;
     font-weight: inherit;
     font-style: inherit;
-}
+} */
 
 /* Evitamos problemas con los pseudoelementos */
-blockquote:before, blockquote:after, q:before, q:after{
+/* blockquote:before, blockquote:after, q:before, q:after{
     content: '';
     content: none;
-}
+} */
 
 /* Modificamos la tipografía general */
-body{
+/* body{
     min-height: 100vh;
     font-size: 100%;
     font-family: var(--tipo--principal);
-}
+} */

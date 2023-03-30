@@ -46,7 +46,6 @@
 	
 	<!-- Atropos -->
 	<link rel="stylesheet" href="atropos/atropos.min.css" />
-	<link rel="hoja de estilo" href="scss/main.scss">   
 
 	<!-- Flickity -->
 	<link rel="stylesheet" href="flickity/flickity.min.css">
@@ -56,7 +55,7 @@
 	
 	<!-- Título e Ícono-->
 	<title>Gabriel Johann Rojas</title>
-	<link rel="icon" href="img/ojo-3.png" type="image/png">
+	<link rel="icon" href="img/ico1.png" type="image/png">
 	<!-- <link rel="manifest" href="/manifest.json"> -->
 	<link rel="author" href="gabriel.johann.rojas369@gmail.com">
 
@@ -82,12 +81,18 @@
 				<div class="preloader__eye"></div>
 			</div>
 		</div>
+		
 	</div>
 	<div class="interno loading">
 		<!-- Cabezera -->
 		<header id="header" class="header">
 			<nav id="nav-container" class="nav-container">
-				<ul class="nav__list">
+				<ul class="nav-responsive">
+					<li class="nav__item-responsive"></li>
+					<li class="nav__item-responsive"></li>
+					<li class="nav__item-responsive"></li>
+				</ul>
+				<ul class="nav">
 					<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#sobre-mi" data-number="01">Sobre mí</a></li>
 					<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#mis-proyectos" data-number="02">Mis proyectos</a></li>
 					<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#contacto" data-number="03">Contacto</a></li>
@@ -121,15 +126,16 @@
 		<main class="main">
 		<!-- Inicio -->
 			<section id="inicio">
-				<div class="inicio-container inicio__container">
-					<h1 class="descripcion-arriba">¿Qué tal? soy</h1>
-					<h1 class="title-1 title">Gabriel Rojas<br> Soporte TI</h1>
-					<p class="descripcion">
-						Soy un desarrollador frontend, asimismo
-						creé este portafolios con el afán de mostrar mis habilidades.
+				<div class="inicio inicio__container">
+					<h1 class="txt descripcion-arriba">¿Qué tal? soy</h1>
+					<h1 class="txt title-1 title">Gabriel Rojas </h1>
+					<span class="txt soporteTI">Soporte TI </span>
+					<p class="txt descripcion">
+						Soy un desarrollador frontend apasionado por crear experiencias web únicas
+						e impresionantes con HTML, CSS y JavaScript.
 					</p>
 				</div>
-				<div class="inicio-container  inicio__container-ojo">
+				<div class="inicio inicio__container-ojo">
 					<div class="ojo">
 						<div id="div-sonido" class="punto"></div>
 					</div>
@@ -140,16 +146,18 @@
 			<section id="sobre-mi">
 				<h2 class="title-2 sobre-mi__text">Sobre mí</h2>
 				<div class="sobre-mi__container">
-					<div role="tablist" id="botones" class="botones">
-						<button id="tab-0" tabindex="" role="tab" class="boton activo" data-contenido="Botón 1">Yo</button>
-						<button id="tab-1" tabindex="" role="tab" class="boton" data-contenido="Botón 2"><span>Lenguajes</span></button>
-						<button id="tab-2" tabindex="" role="tab" class="boton" data-contenido="Botón 3">Tecnologías</button>
+					<div class="botones" role="tablist" id="botones">
+						<button class="boton activo" id="tab-0" tabindex="" role="tab"data-contenido="Botón 1">Yo</button>
+						<button class="boton" id="tab-1" tabindex="" role="tab" data-contenido="Botón 2"><span>Lenguajes</span></button>
+						<button class="boton" id="tab-2" tabindex="" role="tab" data-contenido="Botón 3">Tecnologías</button>
+						<button class="boton" id="tab-3" tabindex="" role="tab" data-contenido="Botón 4">A</button>
+						<button class="boton" id="tab-4" tabindex="" role="tab" data-contenido="Botón 5">B</button>
 					</div>
-					<div id="contenido" class="card">
+					<div class="card" id="contenido">
 						<div id="panel-0" tabindex="" role="tabpanel">
 							<img class="card-img" src="img/html.png" alt="HTML5">
 							<img class="card-img" src="img/css.png" alt="CSS3">
-							<img  class="card-img" src="img/javascript.png" alt="javaScript">
+							<img class="card-img" src="img/javascript.png" alt="javaScript">
 						</div>
 						<div id="panel-1" tabindex="" role="tabpanel"></div>
 						<div id="panel-2" tabindex="" role="tabpanel"></div>
