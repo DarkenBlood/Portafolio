@@ -206,8 +206,11 @@ window.addEventListener('focus', () => {
 window.addEventListener("load", () => {
 	const preloader = document.querySelector(".preloader");
 	const contenido = document.querySelector(".interno");
+	const contenidoTwo = document.querySelector(".internoTwo");
+	
 	setTimeout(() => {
 		contenido.classList.remove("loading");
+		contenidoTwo.classList.remove("loading");
 		preloader.classList.add("fadeOut");
 		
 	}, 2000);

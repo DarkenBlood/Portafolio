@@ -11,6 +11,7 @@
     --size-icon: 1.5em;
 
     /* Texto */
+    --title-color: linear-gradient(90deg, rgba(137,131,247,1) 0%, rgba(211,186,249,1) 50%, rgba(137,131,247,1) 100%);
     --general-color: #8983f7;
     --text-color-descripcion: #a3a3a3;
     --text-color: #f7f7f7;
@@ -35,11 +36,16 @@
 }
 
 .light-theme {
-    --body-color: #dadada;
+    --body-color: #e4e4e4;
+
+    --title-color: linear-gradient(90deg, rgba(137,131,247,1) 0%, rgba(76,67,91,1) 50%, rgba(137,131,247,1) 100%);
     --text-color: #191919;
-    --container-color: #b3b3b3;
+    --text-color-descripcion: #3a3a3a;
+
+    --container-color: #6e6e6e;
     --scroll-color: #838383;
     --cursor-color: #111111;
+
     --mini-ojo: #000000;
     --mini-punto: #ffffff;
     --nav-color: #ececec;
@@ -47,10 +53,14 @@
 
 .dark-theme {
     --body-color: #111111;
+    --title-color: linear-gradient(90deg, rgba(137,131,247,1) 0%, rgba(211,186,249,1) 50%, rgba(137,131,247,1) 100%);
     --text-color: #f7f7f7;
+    --text-color-descripcion: #a3a3a3;
+
     --container-color: #191919;
     --scroll-color: #1D222F;
     --cursor-color: #dadada;
+
     --mini-ojo: #ffffff;
     --mini-punto: #000000;
     --nav-color: #111111;
@@ -165,7 +175,7 @@
 
     background-color: var(--nav-color);
 
-    transition: padding .5s;
+    transition: padding .5s, background .3s;
 }
 
 .nav-right {
@@ -315,25 +325,31 @@
 }
 
 .nav-a:hover::after {
+    content: '';
     position: absolute;
     bottom: 15%;
-    left: 15%;
+    left: 38%;
 
-    width: 70%;
-    height: 6px;
+    width: 40%;
+    height: 4px;
     border-radius: 20px;
 
     opacity: 0;
-    content: "";
+    
 
     background-color: #ac84e0;
 
     animation: upBar .3s forwards;
 }
 
-/* .nav-a:hover:first-child::after {
+
+.nav__item:first-child > .nav-a::after {
     animation: upBarTwo .3s forwards;
-} */
+}
+
+.nav__item:last-child > .nav-a::after {
+    animation: upBarTwo .3s forwards;
+}
 
 @keyframes upBar {
     from{ transform: scale(0.5); opacity: 0;}
@@ -341,11 +357,11 @@
     to{ transform: scale(1); rotate: 2deg; opacity: 1;}
 }
 
-/* @keyframes upBarTwo {
+@keyframes upBarTwo {
     from{ transform: scale(0.5); opacity: 0;}
 
-    to{ transform: scale(1); rotate: -2deg; opacity: 1;}
-} */
+    to{ transform: scale(1); rotate: -3deg; opacity: 1;}
+}
 
 .nav-a:hover {
     color: #ac84e0e6;
@@ -360,7 +376,6 @@
     display: flex;
     justify-content: center;
     height: 100%;
-    padding: 0 20px;
 }
 
 .sub__nav-right {
@@ -376,11 +391,28 @@
 }
 
 .switch {
-    height: var(--height-nav);
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 100%;
+    height: var(--height-nav);
+    padding: 0 20px;
+}
+
+.switch:hover, .idioma:hover {
+    animation: moveIcon .5s;
+
+}
+
+@keyframes moveIcon {
+    from { transform: rotate(0deg) translate(0, 0);}
+
+    33% { transform: rotate(5deg) translate(0px, 3px);}
+
+    66% { transform: rotate(-5deg) translate(0, -5px);}
+
+    to { transform: rotate(0deg) translate(0, 0);}
 }
 
 .checkbox {
@@ -434,7 +466,9 @@
     width: 550px;
     height: 550px;
 
-    background-color: #191919;
+    background-color: var(--container-color);
+
+    transition: background .5s;
     animation: container-ojo 1s 1.5s forwards;
 }
 
@@ -467,7 +501,7 @@
     padding: 15px 0 5px 0;
     background-clip: content-box;
     background: rgb(137,131,247);
-    background: linear-gradient(90deg, rgba(137,131,247,1) 0%, rgba(211,186,249,1) 50%, rgba(137,131,247,1) 100%);
+    background: var(--title-color);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     word-spacing: 1px;
@@ -695,7 +729,6 @@
 
 /* Estilos de la sección de mis proyectos */
 #mis-proyectos {
-
     height: 100vh;
     color: #ffffff;
 }
@@ -775,7 +808,6 @@ section {
     font-weight: 300;
 }
 
-
 /* Estilos de la sección de contacto */
 #contacto {
     display: flex;
@@ -851,7 +883,6 @@ section {
     background-color: var(--general-color) !important;
     color: var(--general-color) !important;
 }
-
 
 .form__input:-webkit-autofill {
     background-color: var(--general-color) !important;
@@ -959,6 +990,10 @@ section {
 }
 
 /* Preloader */
+.importante {
+    display: block !important;
+}
+
 .preloader {
     position: fixed;
     top: 0;
@@ -1034,7 +1069,6 @@ section {
     }
 }
 
-
 .carga {
     width: 70px;
     height: 70px;
@@ -1065,6 +1099,10 @@ section {
     to{ transform: rotate(360deg);}
 }
 
+
+
+
+/* Estilos de los proyectos */
 .gallery {
     position: relative;
     top: 50%;
@@ -1076,7 +1114,6 @@ section {
     background-color: transparent;
 }
 
-/* Proycto */
 .gallery-cell {
     width: 66%;
     height: 500px;
@@ -1095,7 +1132,6 @@ section {
     color: var(--general-color);
 }
 
-/* Footer */
 
 
 
