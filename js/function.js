@@ -125,17 +125,26 @@ if (punto) {
 	}
 }
 
-// 
+
+
 // Ojo - Aparición
 const miniOjo = document.querySelector('.caja-ojo');
 
+
 window.addEventListener('scroll', function() {
-	if (window.pageYOffset > 500) {
-		miniOjo.classList.replace('caja-ojo-oculto', 'caja-ojo-visible');
+	if (window.innerWidth > 830) {
+		if (window.pageYOffset > 500) {
+			miniOjo.classList.replace('caja-ojo-oculto', 'caja-ojo-visible');
+		} else {
+			miniOjo.classList.replace('caja-ojo-visible', 'caja-ojo-oculto');
+		}
 	} else {
-		miniOjo.classList.replace('caja-ojo-visible', 'caja-ojo-oculto');
+		miniOjo.classList.replace('caja-ojo-oculto', 'caja-ojo-visible');
 	}
+
 });
+
+
 
 
 // Sonido
@@ -200,7 +209,11 @@ window.addEventListener("load", () => {
 	setTimeout(() => {
 		contenido.classList.remove("loading");
 		preloader.classList.add("fadeOut");
+		
 	}, 2000);
+	setTimeout(() => {
+		preloader.classList.add("loading");
+	}, 4000)
 });
 
 // window.addEventListener("load", () => {
@@ -238,7 +251,7 @@ const botones = document.querySelectorAll('.boton');
 const contenido = document.getElementById('contenido');
 
 botones.forEach(boton => {
-  boton.addEventListener('click', () => {
+	boton.addEventListener('click', () => {
     // Cambiar el contenido según el botón seleccionado
     const contenidoId = boton.dataset.contenido;
     cambiarContenido(contenidoId);
@@ -246,7 +259,7 @@ botones.forEach(boton => {
     // Cambiar la clase activo en los botones
     botones.forEach(boton => boton.classList.remove('activo'));
     boton.classList.toggle('activo');
-  });
+	});
 });
 
 function cambiarContenido(contenidoId) {

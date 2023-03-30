@@ -87,6 +87,7 @@
 		<!-- Cabezera -->
 		<header id="header" class="header">
 			<nav id="nav-container" class="nav-container">
+
 				<ul class="nav-responsive">
 					<li class="nav__item-responsive"></li>
 					<li class="nav__item-responsive"></li>
@@ -236,12 +237,14 @@
 			</section>
 		<!-- Contacto -->
 			<section id="contacto">
+				<h2  class="title-2 contacto__text">Contacto</h2>
 				<div class="contacto__container">
-					<h2  class="title-2 contacto__text">Contacto</h2>
 					<form class="form" action="sumbit">
-						<input class="form__input" type="text">
-						<input class="form__input" type="email">
-						<textarea class="form__input form__textarea" name="textarea" id="" cols="30" rows="10"></textarea>
+						<div class="form__group">
+							<input class="form__input input-text" type="text" placeholder="Nombre" required>
+							<input class="form__input input-email" type="email"  placeholder="Email" pattern=".+@.+\..+" required>
+						</div>
+						<textarea class="form__input form__textarea" name="textarea" cols="10" rows="10"  placeholder="Mensaje :D" required></textarea>
 						<input class="form__input form__submit" type="submit">
 					</form>	
 				</div>
@@ -250,10 +253,10 @@
 		<!-- Pie de página -->
 		<footer class="footer">
 			<nav class="footer__nav">
-				<ul class="nav__list">
-					<li class="nav__item"><a class="social-item" href="https://www.instagram.com/elgabyxo/">Instagram</a></li>
-					<li class="nav__item"><a class="social-item" href="https://github.com/DarkenBlood">GitHub</a></li>
-					<li class="nav__item"><a class="social-item" href="https://www.linkedin.com/in/gabriel-johann-rojas/">Linkedin</a></li>
+				<ul class="social__list">
+					<li class="social__item"><a class="social-a" href="https://www.instagram.com/elgabyxo/"><div class="social instagram">I</div></a></li>
+					<li class="social__item"><a class="social-a" href="https://github.com/DarkenBlood"><div class="social github">G</div></a></li>
+					<li class="social__item"><a class="social-a" href="https://www.linkedin.com/in/gabriel-johann-rojas/"><div class="social linkedin">L</div></a></li>
 				</ul>
 			</nav>
 		</footer>
