@@ -270,6 +270,9 @@ function cambiarContenido(contenidoId) {
   // ...
 }
 
+
+
+
 const myAtropos = Atropos({
 	el: '.my-atropos',
 	// Parámetros
@@ -282,15 +285,24 @@ const myAtropos = Atropos({
 	// highlight: false,
 	// durationEnter: 600,
 	// activeOffset: 60
-	durationEnter: 500,
-	rotateXMax: 35,
-	rotateYMax: 35,
 	highlight: false,
 	rotateLock: true,
-	alwaysActive: true,
+	activeOffset: 40,
 	shadow: true,
-	shadowOffset: 800,
+	durationEnter: 1000,
+	shadowScale: .75,
+	shadowOffset: 1,
 	// shadowScale: 0.5,
+	onEnter() {
+		const imgContainer = document.querySelector(".img-container");
+		imgContainer.classList.add("img-container-max");
+		console.log("enter");
+	},
+	onLeave() {
+		const imgContainer = document.querySelector(".img-container");
+		imgContainer.classList.remove("img-container-max");
+		console.log("leave");
+	}
 });
 
 const mySecondAtropos = Atropos({
@@ -298,9 +310,11 @@ const mySecondAtropos = Atropos({
 	// Parámetros
 	highlight: false,
 	rotateLock: true,
-	alwaysActive: true,
+	activeOffset: 40,
 	shadow: true,
-	shadowOffset: 20,
+	durationEnter: 1000,
+	shadowScale: .75,
+	shadowOffset: 1,
 });
 
 const myThirdAtropos = Atropos({
@@ -308,7 +322,9 @@ const myThirdAtropos = Atropos({
 	// Parámetros
 	highlight: false,
 	rotateLock: true,
-	alwaysActive: true,
+	activeOffset: 40,
 	shadow: true,
-	shadowOffset: 20,
+	durationEnter: 1000,
+	shadowScale: .75,
+	shadowOffset: 1,
 });
