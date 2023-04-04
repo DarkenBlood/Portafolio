@@ -703,10 +703,6 @@
     background-color: var(--container-color);
 }
 
-.panel {
-
-}
-
 #panel-1 {
     display: flex;
     flex-direction: row;
