@@ -1,62 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<!-- Meta -->
+	<!-- Básico -->
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- <meta name="generator" content="Gatsby 3.4.1"> -->
 
+	<!-- Descripción -->
 	<meta name="description" content="Gabriel Rojas, soporte TI, programador fullstack, diseñador UI/UX.">
 	<meta name="robots" content="index,follow,archive">
-
 	<meta name="Keywords" content="Gabriel Rojas, soporte TI, programador fullstack, diseñador UI/UX.">
 	
 	<!-- Meta avanzado -->
 	<meta name="googlebot" content="index,follow">
-	<!-- <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" data-react-helmet="true"> -->
+	<!-- <meta name="google-site-verification" content="" data-react-helmet="true"> -->
 	<meta name="subject" content="Portfolio">
 	<meta name="msapplication-TileColor" content="#111111">
 	<meta name="theme-color" content="#111111">
 	<meta name="application-name" content="gabrielrojas">
-	<!-- <meta name="Content-Security-Policy" content="default-src 'self'"> -->
 
-	<!-- Open Graph data -->
-	<meta property="og:site_name" content="Gabriel Rojas">
-	<meta property="og:locale" content="es_ES">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://darkenblood.github.io/Portafolio/">
-	<meta property="og:image" content="img/portafolio.png">
-	<meta property="og:description" content="Gabriel Rojas, soporte TI, programador fullstack, diseñador UI/UX.">
-	<meta property="og:title" content="Gabriel Rojas">
-	<meta property="og:tag" content="img/portafolio.png">
-	
-
+	<!-- Autor -->
 	<meta property="article:author" content="Gabriel Rojas">
 	<meta name="image" content="img/portafolio.png">
-	<!--  data-react-helmet="true" -->
-
 
 	<!-- Estilos CSS -->
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-	
-	<!-- Atropos -->
-	<link rel="stylesheet" href="atropos/atropos.min.css" />
-
-	<!-- Flickity -->
-	<link rel="stylesheet" href="flickity/flickity.min.css">
+	<!-- Librerías -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="frameworks/atropos/atropos.min.css">
+	<link rel="stylesheet" type="text/css" href="frameworks/flickity/flickity.min.css">
 	
 	<!-- Fuentes -->
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu&display=swap">
 	
-	<!-- Título e Ícono-->
+	<!-- Título e Ícono -->
 	<title>Gabriel Johann Rojas</title>
-	<link rel="icon" href="img/ojo-ico.png" type="image/png">
-	<!-- <link rel="manifest" href="/manifest.json"> -->
+	<link rel="icon" type="image/ico" href="assets/img/ojo-violeta.ico">
 	<link rel="author" href="gabriel.johann.rojas369@gmail.com">
 </head>
 <body class="body">
@@ -69,9 +50,9 @@
 
 	<!-- Audio -->
 		<audio id="audio">
-			<source src="sonidos/miau.mp3" type="audio/mpeg">
-			<source src="sonidos/miau.ogg" type="audio/ogg">
-			Tu navegador no soporta audio HTML5.
+			<source type="audio/mpeg" src="sonidos/miau.mp3">
+			<source type="audio/ogg" src="sonidos/miau.ogg">
+			<p class="txt descripcion">Tu navegador no soporta audio HTML5</p>
 		</audio>
 
 	<!-- Preloader -->
@@ -82,11 +63,10 @@
 		</div>
 		
 	</div>
-	<div class="interno loading">
+	<div class="interno">
 		<!-- Cabezera -->
 		<header id="header" class="header">
 			<nav id="nav-container" class="nav-container">
-
 				<ul class="nav-responsive">
 					<li class="nav__item-responsive"></li>
 					<li class="nav__item-responsive"></li>
@@ -98,7 +78,7 @@
 					<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#contacto" data-number="03">Contacto</a></li>
 				</ul>
 				<div class="nav-center caja-ojo caja-ojo-oculto">
-					<a id="ir-arriba" class="ojito" href="#inicio" >
+					<a id="ir-arriba" class="ojito" href="#inicio">
 						<div class="mini-ojo">
 							<div id="mini-punto" class="mini-punto"></div>
 							<img id="mini-ceja" class="mini-ceja" src="svg/lash-white.svg" alt="Ojo">
@@ -114,7 +94,7 @@
 					</div>
 					<div class="sub__nav-right idioma__container animate__animated animate__bounceInRight">
 						<div class="idioma">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" role="img">
 								<path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1Zm8 11c0 .7-.1 1.4-.3 2-.6-1.5-1.6-3.1-3-4.7l1.8-1.8c1 1.3 1.5 2.8 1.5 4.5ZM6.5 6.5c1.3 0 3.6.8 6 2.9l-3.2 3.2C7.1 9.8 6.5 7.5 6.5 6.5Zm8.1 5c2.3 2.7 2.9 5 2.9 6-1.3 0-3.6-.8-6-2.9l3.1-3.1Zm1.9-6.1-1.9 1.9c-1.6-1.4-3.2-2.4-4.7-3 .7-.2 1.3-.3 2-.3 1.8 0 3.3.5 4.6 1.4ZM4 12c0-.7.1-1.4.3-2 .6 1.5 1.6 3.1 3 4.7l-1.8 1.8C4.5 15.2 4 13.7 4 12Zm3.5 6.6 1.9-1.9c1.6 1.4 3.2 2.4 4.7 3-.7.2-1.3.3-2 .3-1.8 0-3.3-.5-4.6-1.4Z" fill="currentColor"></path>
 							</svg>
 						</div>
@@ -122,54 +102,80 @@
 				</div>
 			</nav>
 		</header>
-	</div>
 		<!-- Contenido -->
 		<main class="main">
 		<!-- Inicio -->
-			<div class="internoTwo loading">
-				<section id="inicio">
-					<div class="inicio inicio__container">
-						<h1 class="txt descripcion-arriba">¿Qué tal? soy</h1>
-						<h1 class="txt title-1 title">Gabriel Rojas </h1>
-						<span class="txt soporteTI">Soporte TI </span>
-						<p class="txt descripcion">
-							Soy un desarrollador frontend apasionado por crear experiencias web únicas
-							e impresionantes con HTML, CSS y JavaScript.
-						</p>
-					</div>
-					<div class="inicio inicio__container-ojo">
-						<div class="ojo">
-							<div id="div-sonido" class="punto"></div>
-						</div>
-					</div>
-
-				</section>
+		<section id="inicio">
+			<div class="inicio inicio__container">
+				<h2 class="txt descripcion-arriba">¿Qué tal? soy</h2>
+				<h1 class="txt title-1 title">Gabriel Rojas</h1>
+				<span class="txt soporteTI">Soporte TI</span>
+				<p class="txt descripcion">
+					Soy un desarrollador frontend apasionado por crear experiencias web únicas
+					e impresionantes con HTML, CSS y JavaScript.
+				</p>
 			</div>
+			<div class="inicio inicio__container-ojo">
+				<div class="ojo">
+					<div id="div-sonido" class="punto"></div>
+				</div>
+			</div>
+		</section>
 		<!-- Sobre mí -->
-			<section id="sobre-mi">
+		<section id="sobre-mi">
 				<h2 class="title-2 sobre-mi__text">Sobre mí</h2>
 				<div class="sobre-mi__container">
 					<div class="botones" role="tablist" id="botones">
-						<button class="boton activo" id="tab-0" tabindex="" role="tab"data-contenido="Botón 1">Yo</button>
+						<button class="boton" id="tab-0" tabindex="" role="tab"data-contenido="Botón 1">Yo</button>
 						<button class="boton" id="tab-1" tabindex="" role="tab" data-contenido="Botón 2"><span>Lenguajes</span></button>
 						<button class="boton" id="tab-2" tabindex="" role="tab" data-contenido="Botón 3">Tecnologías</button>
 						<button class="boton" id="tab-3" tabindex="" role="tab" data-contenido="Botón 4">A</button>
 						<button class="boton" id="tab-4" tabindex="" role="tab" data-contenido="Botón 5">B</button>
 					</div>
 					<div class="card" id="contenido">
-						<div id="panel-0" tabindex="" role="tabpanel">
-							<img class="card-img" src="img/html.png" alt="HTML5">
-							<img class="card-img" src="img/css.png" alt="CSS3">
-							<img class="card-img" src="img/javascript.png" alt="javaScript">
-						</div>
-						<div id="panel-1" tabindex="" role="tabpanel"></div>
-						<div id="panel-2" tabindex="" role="tabpanel"></div>
+						<article id="panel-0" class="panel" tabindex="" role="tabpanel">
+							<img class="gabicito" src="img/gabicito.jpg" alt="Gaby" role="presentation">
+							<p class="txt descripcion text-img">
+								💾 Como apasionado de la tecnología, 
+								siempre busco ampliar mis habilidades y conocimientos en el campo 
+								de la informática. Actualmente, estoy cursando Ingeniería en Sistema 
+								de la Información en la Universidad Tecnológica Nacional (UTN), donde hoy, 
+								tengo la oportunidad de adquirir conocimientos aplicables en proyectos 
+								de gran impacto.
+							</p>
+							<p class="txt descripcion">
+								💡 Además, me mantengo actualizado en las últimas tendencias y tecnologías 
+								a través de cursos especializados como Ciberseguridad, JavaScript, Java, 
+								Python, etc. lo cual me permite abordar desafíos complejos.
+							</p>
+							<p class="txt descripcion">
+								💻 Mi principal objetivo es unirme a una organización con el afán de 
+								aplicar mis habilidades y conocimientos en proyectos desafiantes y 
+								enriquecedores, asimismo, trabajar junto a profesionales experimentados 
+								en el campo.
+							</p>
+							<p class="txt descripcion">
+								🚀 Si conocés alguna oportunidad que encaje con mi perfil, no dudes en 
+								contactarme.
+							</p>
+						</article>
+						<article id="panel-1" class="panel" tabindex="" role="tabpanel">
+							<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" height="40" width="40" alt="HTML logo">
+							<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" height="40" width="40" alt="CSS3 logo">
+							<img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg" width="40" height="40" alt="JavaScript">
+							<img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/php/php-plain.svg" width="40" height="40" alt="php">
+							<img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/python/python-original.svg" width="40" height="40" alt="Python">
+						</article>
+						<article id="panel-2" class="panel" tabindex="" role="tabpanel">
+							<img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/git/git-original-wordmark.svg" width="40" height="40" alt="Git">
+							<img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/mysql/mysql-plain.svg" width="40" height="40"alt="MySQL">
+						</article>
 					</div>
 				</div>
 				
-			</section>
+		</section>
 		<!-- Mis proyectos -->
-			<section id="mis-proyectos">
+		<section id="mis-proyectos">
 				<!-- Carrusel -->
 				<h2  class="title-2 mis-proyectos__text">Mis proyectos</h2>
 				<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
@@ -184,11 +190,11 @@
 									<div class="atropos-inner">
 									<!-- put your custom content here -->
 										<div class="img-container">
-											<img class="img-atropos" src="img/proyecto3.png" data-atropos-offset="-5">
+											<img class="img-atropos" src="assets/img/proyecto3.png" data-atropos-offset="-5">
 										</div>
 										<div class="atropos__container" data-atropos-opacity="0;100%"> 
-											<h1 class="title-1-atropos">Proyecto de lotes</h1>
-											<a class="a-atropos" href="https://cañuelassur.com"><h3 class="title-3-atropos">Ingresar al proyecto</h1></a>
+											<h2 class="title-1-atropos">Proyecto de lotes</h2>
+											<a class="a-atropos" href="https://cañuelassur.com"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
 										</div>
 									</div>
 								</div>
@@ -206,12 +212,12 @@
 									<div class="atropos-inner">
 									<!-- put your custom content here -->
 										<div class="img-container">
-											<img class="img-atropos" src="img/proyecto2.png" data-atropos-offset="-5">
+											<img class="img-atropos" src="assets/img/proyecto2.png" data-atropos-offset="-5">
 										</div>
 										<div class="atropos__container" data-atropos-opacity="0;100%"> 
 											<!-- data-atropos-offset="0" -->
-											<h1 class="title-1-atropos">Proyecto de quintas</h1>
-											<a class="a-atropos" href="https://alquintas.com"><h3 class="title-3-atropos">Ingresar al proyecto</h1></a>
+											<h2 class="title-1-atropos">Proyecto de quintas</h2>
+											<a class="a-atropos" href="https://alquintas.com"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
 										</div>
 									</div>
 								</div>
@@ -229,20 +235,20 @@
 									<div class="atropos-inner">
 									<!-- put your custom content here -->
 										<div class="img-container">
-											<img class="img-atropos" src="img/proyecto3.png" data-atropos-offset="-5">
+											<img class="img-atropos" src="assets/img/proyecto3.png" data-atropos-offset="-5">
 										</div>
 										<div class="atropos__container" data-atropos-opacity="0;100%"> 
-											<h1 class="title-1-atropos">Proyecto de lotes</h1>
-											<a class="a-atropos" href="https://cañuelassur.com"><h3 class="title-3-atropos">Ingresar al proyecto</h1></a>
+											<h2 class="title-1-atropos">Proyecto de lotes</h2>
+											<a class="a-atropos" href="https://cañuelassur.com"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-			</section>
+		</section>
 		<!-- Contacto -->
-			<section id="contacto">
+		<section id="contacto">
 				<h2  class="title-2 contacto__text">Contacto</h2>
 				<div class="contacto__container">
 					<form class="form" action="sumbit">
@@ -254,7 +260,7 @@
 						<input class="form__input form__submit" type="submit">
 					</form>	
 				</div>
-			</section>
+		</section>
 		</main>
 		<!-- Pie de página -->
 		<footer class="footer">
@@ -281,11 +287,73 @@
 				</ul>
 			</nav>
 		</footer>
+	</div>
 <!-- Scripts -->
 	<script type="text/JavaScript" src="js/index.js"></script>
 	<!-- Librerías -->
-	<script src="flickity/flickity.pkgd.min.js"></script>
-	<script src="atropos/atropos.min.js"></script>
+	<script src="frameworks/flickity/flickity.pkgd.min.js"></script>
+	<script src="frameworks/atropos/atropos.min.js"></script>
+	<script>
+		const myAtropos = Atropos({
+	el: '.my-atropos',
+	// Parámetros
+	// rotateLock: true,
+	// rotateXMax: 15,
+	// rotateYMax: 15,
+	// shadow: true,
+	// shadowOffset: 10,
+	// shadowScale: 0.8,
+	// highlight: false,
+	// durationEnter: 600,
+	// activeOffset: 60
+	highlight: false,
+	rotateLock: true,
+	activeOffset: 40,
+	shadow: true,
+	durationEnter: 1000,
+	shadowScale: .75,
+	shadowOffset: 1,
+	// shadowScale: 0.5,
+	onEnter() {
+		const imgContainer = document.querySelector(".img-container");
+		const todo = document.querySelector(".interno");
+		imgContainer.classList.add("img-container-max");
+		// todo.classList.add("focus");
+		console.log("enter");
+	},
+	onLeave() {
+		const imgContainer = document.querySelector(".img-container");
+		const todo = document.querySelector(".interno");
+		imgContainer.classList.remove("img-container-max");
+		
+		console.log("leave");
+	}
+});
+
+const mySecondAtropos = Atropos({
+    el: '.my-second-atropos',
+	// Parámetros
+	highlight: false,
+	rotateLock: true,
+	activeOffset: 40,
+	shadow: true,
+	durationEnter: 1000,
+	shadowScale: .75,
+	shadowOffset: 1,
+});
+
+const myThirdAtropos = Atropos({
+    el: '.my-third-atropos',
+	// Parámetros
+	highlight: false,
+	rotateLock: true,
+	activeOffset: 40,
+	shadow: true,
+	durationEnter: 1000,
+	shadowScale: .75,
+	shadowOffset: 1,
+});
+	</script>
 	<script src="https://kit.fontawesome.com/874b8521fa.js" crossorigin="anonymous"></script>
 <body>
 </html>

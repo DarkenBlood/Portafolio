@@ -30,7 +30,6 @@ if (!isTouch){
 	};
 
 	const onMouseMove = (e) => {
-		// https://css-tricks.com/updating-a-css-variable-with-javascript/
 		cursorEl.style.setProperty('--cursor-x', e.clientX + "px");
 		cursorEl.style.setProperty('--cursor-y', e.clientY + "px");
 	};
@@ -99,11 +98,11 @@ checkbox.addEventListener('change', () => {
 	if (!checkbox.checked) {
 		//Body dark
 		body.classList.replace('light-theme', 'dark-theme');
-    	localStorage.setItem('theme', 'dark-theme');
+    localStorage.setItem('theme', 'dark-theme');
 	} else {
 		//Body light
-    	body.classList.replace('dark-theme', 'light-theme');
-    	localStorage.setItem('theme', 'light-theme');
+    body.classList.replace('dark-theme', 'light-theme');
+    localStorage.setItem('theme', 'light-theme');
 		checkbox.setAttribute('checked', true);
 	}
 });
@@ -119,9 +118,9 @@ if (punto) {
 	document.onmousemove = function(event){
     	const x = event.clientX * 100 / window.innerWidth + '%';
     	const y = event.clientY * 100 / window.innerHeight + '%';
-    	punto.style.left = x;
-    	punto.style.top = y;
-    	punto.style.transform = `translate3d(-${x}, -${y}, 0)`;
+	punto.style.left = x;
+    punto.style.top = y;
+    punto.style.transform = `translate3d(-${x}, -${y}, 0)`;
 	}
 }
 
@@ -143,8 +142,6 @@ window.addEventListener('scroll', function() {
 	}
 
 });
-
-
 
 
 // Sonido
@@ -169,66 +166,14 @@ window.addEventListener('focus', () => {
 });
 
 
-// Cambiar el ícono de la pestaña
-// const iconUrls = [
-// 	"img/centro.png",
-// 	"img/derecha-1.png", "img/derecha-2.png", "img/derecha-3.png", "img/derecha-4.png",
-// 	"img/derecha-3.png", "img/derecha-2.png", "img/derecha-1.png", "img/centro.png",
-// 	"img/izquierda-1.png", "img/izquierda-2.png", "img/izquierda-3.png", "img/izquierda-4.png", 
-// 	"img/izquierda-3.png", "img/izquierda-2.png", "img/izquierda-1.png", "img/centro.png"];
-
-// function cambiarIcono() {
-//     const index = 0;
-//     setInterval(function() {
-//         const link = document.querySelector("link[rel*='icon']") ||
-// 		document.createElement('link');
-//         link.type = 'image/png';
-//         link.rel = 'icon';
-//         link.href = iconUrls[index];
-//         document.getElementsByTagName('head')[0].appendChild(link);
-//         index++;
-//         if (index == iconUrls.length) {
-//             index = 0;
-//         }
-//     }, 100);
-// }
-// cambiarIcono();
-
-
-// Carga
-// const preloader = document.querySelector(".preloader");
-
-// window.addEventListener("load", () => {
-//     preloader.classList.add("fadeOut");
-// });
-
-
 window.addEventListener("load", () => {
 	const preloader = document.querySelector(".preloader");
 	const contenido = document.querySelector(".interno");
-	const contenidoTwo = document.querySelector(".internoTwo");
-	
 	setTimeout(() => {
 		contenido.classList.remove("loading");
-		contenidoTwo.classList.remove("loading");
 		preloader.classList.add("fadeOut");
-		
-	}, 2000);
-	setTimeout(() => {
-		preloader.classList.add("loading");
-	}, 4000)
+	}, 1000);
 });
-
-// window.addEventListener("load", () => {
-// 	const preloader = document.querySelector(".preloader");
-// 	setTimeout(() => {
-// 	  document.body.classList.remove("loading");
-// 	  preloader.classList.add("fadeOut");
-// 	  setTimeout(() => {
-// 		preloader.style.display = "none";
-// 	  }, 1000);
-// 	}, 1000);
-//   });
 
 
 // #Inicio
@@ -240,91 +185,30 @@ enlaceInicio.addEventListener("click", function(event) {
 });
 
 
-// #Sobre mí
-// function cambiarContenido(texto) {
-//     var contenido = document.querySelector('#sobre-mi .card p');
-//     contenido.classList.add('oculto');
-//     setTimeout(function() {
-//       contenido.textContent = texto;
-//       contenido.classList.remove('oculto');
-//     }, 500);
-// }
 
 const botones = document.querySelectorAll('.boton');
-const contenido = document.getElementById('contenido');
+const paneles = document.querySelectorAll('[role="tabpanel"]');
 
-botones.forEach(boton => {
-	boton.addEventListener('click', () => {
-    // Cambiar el contenido según el botón seleccionado
-    const contenidoId = boton.dataset.contenido;
-    cambiarContenido(contenidoId);
+botones.forEach((boton, index) => {
+    boton.addEventListener('click', () => {
+    // Ocultar todos los paneles
+    paneles.forEach(panel => {
+        panel.style.display = 'none';
+    });
 
-    // Cambiar la clase activo en los botones
-    botones.forEach(boton => boton.classList.remove('activo'));
-    boton.classList.toggle('activo');
-	});
+    // Mostrar el panel correspondiente al botón
+const panelId = `panel-${index}`;
+const panel = document.getElementById(panelId);
+    panel.style.display = 'flex';
+    
+    // Cambiar la clase activa del botón
+    botones.forEach(b => {
+        b.classList.remove('activo');
+    });
+    boton.classList.add('activo');
+    });
 });
 
-function cambiarContenido(contenidoId) {
-  // Cambiar el contenido según el ID
-  // ...
-}
 
 
 
-
-const myAtropos = Atropos({
-	el: '.my-atropos',
-	// Parámetros
-	// rotateLock: true,
-	// rotateXMax: 15,
-	// rotateYMax: 15,
-	// shadow: true,
-	// shadowOffset: 10,
-	// shadowScale: 0.8,
-	// highlight: false,
-	// durationEnter: 600,
-	// activeOffset: 60
-	highlight: false,
-	rotateLock: true,
-	activeOffset: 40,
-	shadow: true,
-	durationEnter: 1000,
-	shadowScale: .75,
-	shadowOffset: 1,
-	// shadowScale: 0.5,
-	onEnter() {
-		const imgContainer = document.querySelector(".img-container");
-		imgContainer.classList.add("img-container-max");
-		console.log("enter");
-	},
-	onLeave() {
-		const imgContainer = document.querySelector(".img-container");
-		imgContainer.classList.remove("img-container-max");
-		console.log("leave");
-	}
-});
-
-const mySecondAtropos = Atropos({
-    el: '.my-second-atropos',
-	// Parámetros
-	highlight: false,
-	rotateLock: true,
-	activeOffset: 40,
-	shadow: true,
-	durationEnter: 1000,
-	shadowScale: .75,
-	shadowOffset: 1,
-});
-
-const myThirdAtropos = Atropos({
-    el: '.my-third-atropos',
-	// Parámetros
-	highlight: false,
-	rotateLock: true,
-	activeOffset: 40,
-	shadow: true,
-	durationEnter: 1000,
-	shadowScale: .75,
-	shadowOffset: 1,
-});
