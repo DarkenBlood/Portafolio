@@ -165,12 +165,23 @@ window.addEventListener('focus', () => {
 	document.title = defaultTitle;
 });
 
+
+// Carga de la página
+const loadTime = performance.now();
+const loadTimeSeconds = Math.round(loadTime) / 1000;
+let delay = getComputedStyle(document.documentElement).getPropertyValue('--delay');
+
 window.addEventListener("load", () => {
 	const preloader = document.querySelector(".preloader");
 	const contenido = document.querySelector(".interno");
 	contenido.classList.remove("loading");
 	preloader.classList.add("fadeOut");
+
+	delay = parseFloat(delay);
+	delay += loadTimeSeconds;
+	document.documentElement.style.setProperty('--delay', delay + 's');
 });
+
 
 // #Inicio
 const enlaceInicio = document.getElementById("ir-arriba");
