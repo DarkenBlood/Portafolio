@@ -165,16 +165,12 @@ window.addEventListener('focus', () => {
 	document.title = defaultTitle;
 });
 
-
 window.addEventListener("load", () => {
 	const preloader = document.querySelector(".preloader");
 	const contenido = document.querySelector(".interno");
-	setTimeout(() => {
-		contenido.classList.remove("loading");
-		preloader.classList.add("fadeOut");
-	}, 1000);
+	contenido.classList.remove("loading");
+	preloader.classList.add("fadeOut");
 });
-
 
 // #Inicio
 const enlaceInicio = document.getElementById("ir-arriba");

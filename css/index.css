@@ -17,7 +17,6 @@
     --text-color-descripcion: #a3a3a3;
     --text-color: #f7f7f7;
 
-
     /* Fondo */
     --body-color: #111111;
     --nav-color: #505050;
@@ -31,6 +30,9 @@
     /* Otros */
     --box-shadow-color: #272727;
     --scroll-color: #1D222F;
+    
+    /* Números */
+    --delay: 2s;
 
     /* Fuentes */
     --first-font: 'Quicksand', sans-serif;
@@ -189,15 +191,15 @@
     height: 100%;
 }
 
-.idioma__container {
+/* .idioma__container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 20px;
     height: 100%;
 
-    animation: animate__bounceInRight 2s .3s;
-}
+    animation: animate__bounceInRight 2s 5s;
+} */
 
 .idioma {
     height: var(--size-icon);
@@ -274,22 +276,22 @@
 
 .nav__item {
     height: 100%;
-    
+
     animation: animate__fadeInDown 1s;
 }
 
 .nav__item:nth-of-type(1) {
     min-width: 168px;
-    animation-delay: 0s;
+    animation-delay: calc(0s + var(--delay));
 }
 
 .nav__item:nth-of-type(2) {
     min-width: 208px;
-    animation-delay: .2s;
+    animation-delay: calc(.2s + var(--delay));
 }
 
 .nav__item:nth-of-type(3) {
-    animation-delay: .4s;
+    animation-delay: calc(.4s + var(--delay));
 }
 
 .nav {
@@ -385,11 +387,11 @@
 }
 
 .sub__nav-right:nth-of-type(1) {
-    animation-delay: 0s;
+    animation-delay: calc(0s + var(--delay));
 }
 
 .sub__nav-right:nth-of-type(2) {
-    animation-delay: .5s;
+    animation-delay: calc(.5s + var(--delay));
 }
 
 .switch {
@@ -404,7 +406,6 @@
 
 .switch:hover, .idioma:hover {
     animation: moveIcon .5s;
-
 }
 
 @keyframes moveIcon {
@@ -471,7 +472,8 @@
     background-color: var(--container-color);
 
     transition: background .5s;
-    animation: container-ojo 1s 1.5s forwards;
+    animation: container-ojo 1s forwards;
+    animation-delay: calc(1.5s + var(--delay));
 }
 
 .inicio__container {
@@ -483,7 +485,8 @@
     width: 600px;
     height: 600px;
 
-    animation: container-ojo .6s 1s forwards;
+    animation: container-ojo .6s forwards;
+    animation-delay: calc(1s + var(--delay));
 }
 
 .portafolio {
@@ -1151,15 +1154,11 @@ section {
 
 .preloader__eye::before {
     content: '';
-    
+
     width: 54px;
     height: 54px;
     background-color: black;
     border-radius: 50%;
-}
-
-.loading {
-    display: none;
 }
 
 .a {
@@ -1173,7 +1172,7 @@ section {
 }
 
 .fadeOut {
-    animation: fadeOutDown 2s forwards;
+    animation: fadeOutDown 2s var(--delay) forwards;
 }
 
 @keyframes fadeOutDown {
