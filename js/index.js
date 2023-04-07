@@ -192,30 +192,23 @@ enlaceInicio.addEventListener("click", function(event) {
 });
 
 
-
 const botones = document.querySelectorAll('.boton');
 const paneles = document.querySelectorAll('[role="tabpanel"]');
 
 botones.forEach((boton, index) => {
-    boton.addEventListener('click', () => {
-    // Ocultar todos los paneles
-    paneles.forEach(panel => {
-        panel.style.display = 'none';
-    });
-
-    // Mostrar el panel correspondiente al botón
-const panelId = `panel-${index}`;
-const panel = document.getElementById(panelId);
-    panel.style.display = 'flex';
-    
-    // Cambiar la clase activa del botón
-    botones.forEach(b => {
-        b.classList.remove('activo');
-    });
-    boton.classList.add('activo');
-    });
+	boton.addEventListener('click', () => {
+    	// Ocultar los paneles que no correspondan al botón
+		paneles.forEach(panel => {
+			if (panel.id === `panel-${index}`) {
+				panel.style.display = 'flex';
+			} else {
+				panel.style.display = 'none';
+			}
+		});
+		// Cambiar la clase activa del botón
+		botones.forEach(b => {
+			b.classList.remove('activo');
+		});
+		boton.classList.add('activo');
+	});
 });
-
-
-
-

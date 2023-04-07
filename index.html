@@ -121,7 +121,7 @@
 				<h2 class="txt descripcion-arriba">¿Qué tal? soy</h2>
 				<h1 class="txt title-1 title">Gabriel Rojas</h1>
 				<span class="txt soporteTI">Soporte TI</span>
-				<p class="txt descripcion">
+				<p class="txt descripcion-abajo">
 					Soy un desarrollador frontend apasionado por crear experiencias web únicas
 					e impresionantes con HTML, CSS y JavaScript.
 				</p>
@@ -138,15 +138,18 @@
 				<div class="sobre-mi__container">
 					<div class="botones" role="tablist" id="botones">
 						<button class="boton" id="tab-0" tabindex="" role="tab"data-contenido="Botón 1">Yo</button>
-						<button class="boton" id="tab-1" tabindex="" role="tab" data-contenido="Botón 2"><span>Lenguajes</span></button>
+						<button class="boton" id="tab-1" tabindex="" role="tab" data-contenido="Botón 2">Lenguajes</button>
 						<button class="boton" id="tab-2" tabindex="" role="tab" data-contenido="Botón 3">Tecnologías</button>
-						<button class="boton" id="tab-3" tabindex="" role="tab" data-contenido="Botón 4">A</button>
-						<button class="boton" id="tab-4" tabindex="" role="tab" data-contenido="Botón 5">B</button>
 					</div>
 					<div class="card" id="contenido">
-						<article id="panel-0" class="panel" tabindex="" role="tabpanel">
+						<article id="panel-start" class="panel" tabindex="-1" role="tabpanel">
+							<p class="txt descripcion">
+								Bienvenido
+							</p>
+						</article>
+						<article id="panel-0" class="panel" tabindex="0" role="tabpanel">
 							<img class="gabicito" src="assets/img/gabicito.jpg" alt="Gaby" role="presentation">
-							<p class="txt descripcion text-img">
+							<p class="txt descripcion">
 								💾 Como apasionado de la tecnología, 
 								siempre busco ampliar mis habilidades y conocimientos en el campo 
 								de la informática. Actualmente, estoy cursando Ingeniería en Sistema 
@@ -170,16 +173,20 @@
 								contactarme.
 							</p>
 						</article>
-						<article id="panel-1" class="panel" tabindex="" role="tabpanel">
-							<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" height="40" width="40" alt="HTML logo">
-							<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" height="40" width="40" alt="CSS3 logo">
-							<img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg" width="40" height="40" alt="JavaScript">
-							<img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/php/php-plain.svg" width="40" height="40" alt="php">
-							<img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/python/python-original.svg" width="40" height="40" alt="Python">
+						<article id="panel-1" class="panel" tabindex="1" role="tabpanel">
+							<img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" alt="HTML">
+							<img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" alt="CSS">
+							<img class="ico" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg" alt="JavaScript">
+							<img class="ico" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/php/php-plain.svg" alt="php">
+							<img class="ico" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/mysql/mysql-plain.svg" alt="MySQL">
+							<img class="ico" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/python/python-original.svg" alt="Python">
 						</article>
-						<article id="panel-2" class="panel" tabindex="" role="tabpanel">
-							<img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/git/git-original-wordmark.svg" width="40" height="40" alt="Git">
-							<img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/mysql/mysql-plain.svg" width="40" height="40"alt="MySQL">
+						<article id="panel-2" class="panel" tabindex="2" role="tabpanel">
+							<img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+							<img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+							<img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="npm">
+							<img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass">
+							<img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap">
 						</article>
 					</div>
 				</div>
@@ -264,20 +271,20 @@
 				<div class="contacto__container">
 					<form class="form" action="form.php" method="POST" autocomplete="off">
 						<div class="form__group">
-							<fieldset>
-								<label for="name">Nombre</label>
-								<input class="form__input input-text" name="name" type="text" placeholder="Nombre" required>
+							<fieldset class="fieldset">
+								<label class="label" for="name">Nombre</label>
+								<input class="form__input input-text" name="name" type="text" placeholder="Tu nombre" required>
 							</fieldset>
-							<fieldset>
-								<label for="email">Email</label>
-								<input class="form__input input-email" name="email" type="email" placeholder="Email" pattern=".+@.+\..+" required>
+							<fieldset class="fieldset">
+								<label class="label" for="email">Correo electrónico</label>
+								<input class="form__input input-email" name="email" type="email" placeholder="Tu correo" pattern=".+@.+\..+" required>
 							</fieldset>
 						</div>
-						<fieldset>
-							<label for="message">Mensaje</label>
-							<textarea class="form__input form__textarea" name="message" cols="10" rows="10" placeholder="Mensaje :D" required></textarea>
+						<fieldset class="fieldset">
+							<label class="label" for="message">Mensaje</label>
+							<textarea class="form__input form__textarea" name="message" cols="10" rows="10" placeholder="Tu mensaje..." required></textarea>
 						</fieldset>
-						<fieldset>
+						<fieldset class="fieldset">
 							<input class="form__input form__submit" type="submit" name="Enviar" value="Enviar">
 						</fieldset>
 					</form>
@@ -334,7 +341,7 @@
 	rotateLock: true,
 	activeOffset: 40,
 	shadow: true,
-	durationEnter: 1000,
+	durationEnter: 0,
 	shadowScale: .75,
 	shadowOffset: 1,
 	// shadowScale: 0.5,
@@ -361,7 +368,7 @@ const mySecondAtropos = Atropos({
 	rotateLock: true,
 	activeOffset: 40,
 	shadow: true,
-	durationEnter: 1000,
+	durationEnter: 0,
 	shadowScale: .75,
 	shadowOffset: 1,
 });
@@ -373,7 +380,7 @@ const myThirdAtropos = Atropos({
 	rotateLock: true,
 	activeOffset: 40,
 	shadow: true,
-	durationEnter: 1000,
+	durationEnter: 0,
 	shadowScale: .75,
 	shadowOffset: 1,
 });
