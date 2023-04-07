@@ -262,14 +262,25 @@
 		<section id="contacto">
 				<h2  class="title-2 contacto__text">Contacto</h2>
 				<div class="contacto__container">
-					<form class="form" action="sumbit">
+					<form class="form" action="form.php" method="POST" autocomplete="off">
 						<div class="form__group">
-							<input class="form__input input-text" type="text" placeholder="Nombre" required>
-							<input class="form__input input-email" type="email"  placeholder="Email" pattern=".+@.+\..+" required>
+							<fieldset>
+								<label for="name">Nombre</label>
+								<input class="form__input input-text" name="name" type="text" placeholder="Nombre" required>
+							</fieldset>
+							<fieldset>
+								<label for="email">Email</label>
+								<input class="form__input input-email" name="email" type="email" placeholder="Email" pattern=".+@.+\..+" required>
+							</fieldset>
 						</div>
-						<textarea class="form__input form__textarea" name="textarea" cols="10" rows="10"  placeholder="Mensaje :D" required></textarea>
-						<input class="form__input form__submit" type="submit">
-					</form>	
+						<fieldset>
+							<label for="message">Mensaje</label>
+							<textarea class="form__input form__textarea" name="message" cols="10" rows="10" placeholder="Mensaje :D" required></textarea>
+						</fieldset>
+						<fieldset>
+							<input class="form__input form__submit" type="submit" name="Enviar" value="Enviar">
+						</fieldset>
+					</form>
 				</div>
 		</section>
 		</main>
@@ -305,6 +316,7 @@
 	<script src="https://kit.fontawesome.com/874b8521fa.js" crossorigin="anonymous"></script>
 	<script src="frameworks/flickity/flickity.pkgd.min.js"></script>
 	<script src="frameworks/atropos/atropos.min.js"></script>
+
 	<script>
 		const myAtropos = Atropos({
 	el: '.my-atropos',
