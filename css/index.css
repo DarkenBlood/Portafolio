@@ -36,6 +36,10 @@
 
     /* Fuentes */
     --first-font: 'Quicksand', sans-serif;
+
+
+
+    --movil-height: 70vh;
 }
 
 .light-theme {
@@ -445,7 +449,6 @@
 /* Estilos de la sección inicio */
 #inicio {
     display: flex;
-    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-evenly;
     height: var(--pantalla);
@@ -515,6 +518,7 @@
     width: 200px;
     height: 200px;
     border-radius: 25px;
+    object-fit: cover;
 }
 
 .soporteTI {
@@ -669,7 +673,7 @@
     align-items: center;
     justify-content: center;
 
-    height: 100vh;
+    height: 100vh;  
 }
 
 .sobre-mi__text::before {
@@ -769,7 +773,6 @@
 
 section {
     width: 100vw;
-    padding: 20px 0;
 }
 
 /* Atropos */
@@ -1273,8 +1276,12 @@ section {
 
 
 
-
-
+/* Galería botones */
+.flickity-button {
+    position: absolute;
+    left: 0;
+    width: 20px;
+}
 
 
 
@@ -1296,18 +1303,11 @@ section {
 }
 
 @media screen and (max-width: 1300px) {
-
     section {
         padding: 0 50px;
     }
 
     /* Inicio */
-    #inicio {
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-    }
-
     .inicio {
         transition: height .7s, width .7s, font-size .5s;
     }
@@ -1333,15 +1333,12 @@ section {
 }
 
 @media screen and (max-width: 1100px) {
-
     .title-2 {  
-        margin: 0 50px 40px 50px;
+        margin: 20px 0;
     }
 
     #inicio {
         flex-wrap: wrap;
-        align-items: center;
-        gap: none;
     }
 
     .inicio__container {
@@ -1357,6 +1354,7 @@ section {
     /* Sobre mí */
     #sobre-mi {
         flex-direction: column;
+        height: 100%;
     }
 
     .sobre-mi__container {
@@ -1364,8 +1362,9 @@ section {
         width: 100%;
     }
 
-    .card-img {
-        width: 70px;
+    /* Sobre mí */
+    .card {
+        width: 100%;
     }
 
     .botones {
@@ -1379,15 +1378,17 @@ section {
     /* Proyectos */
     #mis-proyectos {
         display: none;
+
     }
 
     /* Contacto */
     #contacto {
         flex-direction: column;
+        height: 100%;
     }
 
     .contacto__container {
-        width: 60%;
+        width: 100%;
     }
 
     .form__group {
@@ -1396,6 +1397,11 @@ section {
 
     .form__submit {
         height: 50px;
+    }
+
+    /* Footer */
+    .social__list {
+        gap: 3rem;
     }
 }
 
@@ -1420,7 +1426,7 @@ section {
 
     /* Footer */
     .social__list {
-        gap: 4rem;
+        gap: 2rem;
     }
 
     /* Ojo */
@@ -1432,5 +1438,14 @@ section {
     .punto {
         width: 70px;
         height: 70px;
+    }
+
+    /* Sobre mí */
+    #sobre-mi, #contacto {
+        align-items: start;
+    }
+
+    .botones {
+        gap: 1rem;
     }
 }
