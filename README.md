@@ -1,2 +1,2 @@
 # Mi portafolio
-gabrieldesign.tech
+www.gabrieldesign.tech
