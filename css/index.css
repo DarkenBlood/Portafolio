@@ -32,12 +32,10 @@
     --scroll-color: #1D222F;
     
     /* Números */
-    --delay: 2s;
+    --delay: 0s;
 
     /* Fuentes */
     --first-font: 'Quicksand', sans-serif;
-
-
 
     --movil-height: 70vh;
 }

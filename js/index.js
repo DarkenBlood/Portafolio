@@ -178,7 +178,9 @@ window.addEventListener("load", () => {
 	preloader.classList.add("fadeOut");
 
 	delay = parseFloat(delay);
+	// console.log("Delay ="+delay);
 	delay += loadTimeSeconds;
+	// console.log("Delay con el loadtimeSECOND ="+delay);
 	document.documentElement.style.setProperty('--delay', delay + 's');
 });
 

@@ -32,26 +32,30 @@
     position: absolute;
     display: block;
     content: '';
-    top: 3px;
-    right: 133px;
+    top: 1px;
+    right: 132px;
     width: 61%;
-    height: 2px;
+    height: 1px;
+    border-radius: 25px;
     margin-top: 50px;
     background-color: #f5f5f5;
-    transform: rotate(35deg);
+    transform: rotate(34deg);
+    z-index: 91;
 }
 
 .sobre::after {
     position: absolute;
     display: block;
     content: '';
-    top: 3px;
-    left: 133px;
+    top: 1px;
+    left: 132px;
     width: 61%;
-    height: 2px;
+    height: 1px;
+    border-radius: 25px;
     margin-top: 50px;
     background-color: #f5f5f5;
-    transform: rotate(-35deg);
+    transform: rotate(-34deg);
+    z-index: 90;
 }
 
 .parte-trasera {
@@ -86,6 +90,7 @@
     border-top: 100px solid transparent;
     border-right: 150px solid #fff;
     border-left: 150px solid #fff;
+    outline: 1px solid #fff;
     z-index: 90;
 }
 
@@ -101,8 +106,9 @@
     left: 50%;
 
     width: 300px;
-    height: 810px;
-    
+    height: 880px;
+    margin-bottom: 50px !important;
+
     transform: translate(-50%, -50%) scale(0);
     transition: transform .5s;
     perspective: 1000px;
@@ -124,7 +130,7 @@
     transform: perspective(600px) rotateY(0deg);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .carta-trasera {
@@ -132,21 +138,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-/* Contenedor Gaby y Lucy */
-.personitas {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Fotitos */
-.amor {
-    max-width: 150px;
-    height: 210px;
-    margin-top: 20px;
+    text-align: center;
 }
 
 .cartaAbierta {
@@ -306,6 +298,7 @@
 }
 
 .emisor {
+    /* color: #D4ADFC; */
     font-size: 15px;
 }
 
@@ -314,10 +307,121 @@
 }
 
 .mensaje {
-    color: rgb(17, 44, 221);
+    color: #19A7CE;
     font-size: 12px;
 }
 
 .pantalla {
     visibility: hidden;
+}
+
+.text-1::after {
+    position: absolute;
+    content: '¡¡es tu día!!';
+    font-size: 13px;
+    color: #A0D8B3;
+    transform: translate(170px, 5px) rotate(-12deg);
+}
+
+.text-2::after {
+    position: absolute;
+    content: '¡nunca!';
+    font-size: 13px;
+    color: #A0D8B3;
+    transform: translate(20px, 5px) rotate(7deg);
+}
+
+.text-3::after {
+    position: absolute;
+    content: '(y te doy)';
+    font-size: 10px;
+    color: #d8a0a0;
+    transform: translate(10px, 0);
+}
+
+/* Imágenes de adelante */
+.azul, .verde, .abeja, .abejita, .ranita {
+    position: absolute;
+    width: 40px;
+}
+
+.azul {
+    top: 365px;
+    left: 270px;
+    transform: rotate(-15deg);
+    opacity: .8;
+}
+
+.verde {
+    top: 595px;
+    left: -10px;
+    transform: rotate(15deg);
+    opacity: .8;
+}
+
+.abeja {
+    top: 15px;
+    left: 210px;
+}
+
+.abejita {
+    top: 805px;
+    left: 250px;
+}
+
+.ranita {
+    top: 290px;
+    left: 0px;
+    width: 30px;
+    transform: rotate(15deg);
+    opacity: .8;
+}
+
+/* Imágenes de atrás */
+.personitas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fotitos */
+.amor {
+    max-width: 150px;
+    height: 210px;
+}
+
+.frisk {
+    position: absolute;
+    top: 5px;
+    left: 230px;
+    width: 60px;
+    transform: rotate(-15deg);
+}
+
+.dibujito {
+    margin: 0 20px;
+    width: 100px;
+}
+
+.dibujo {
+    margin: 0 20px;
+    width: 50px;
+}
+
+.seccion {
+    padding: 10px 0;
+}
+
+.chat {
+    margin: 0 auto;
+    width: 200px;
+}
+
+.mini-1 {
+    width: 120px;
+}
+
+.mini-2 {
+    width: 160px;
 }
