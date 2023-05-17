@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Poppins:wght@200;400&display=swap');
+:root {
+    --corazon: 30px;
+}
+
+/* GENERAL */
+.body {
+    font-family: 'Libre Baskerville', serif;
+    background-color: #111111;
+    color: #282828;
+    line-height: 1.15;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre {
+    position: relative;
+    display: block;
+
+    width: 300px;
+    height: 200px;
+
+    z-index: 20;
+}
+
+.sobre::before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 3px;
+    right: 133px;
+    width: 61%;
+    height: 2px;
+    margin-top: 50px;
+    background-color: #f5f5f5;
+    transform: rotate(35deg);
+}
+
+.sobre::after {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 3px;
+    left: 133px;
+    width: 61%;
+    height: 2px;
+    margin-top: 50px;
+    background-color: #f5f5f5;
+    transform: rotate(-35deg);
+}
+
+.parte-trasera {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    border-top: 100px solid #c4c4c4;
+    border-right: 150px solid transparent;
+    border-left: 150px solid transparent;
+}
+
+.parte-delantera {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    border-top: 100px solid #fff;
+    border-right: 150px solid transparent;
+    border-left: 150px solid transparent;
+    border-bottom: 0px solid transparent;
+    transition: transform .5s;
+}
+
+.cuerpo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgb(209, 209, 209);
+    border-top: 100px solid transparent;
+    border-right: 150px solid #fff;
+    border-left: 150px solid #fff;
+    z-index: 90;
+}
+
+.abrirSobre {
+    transform: perspective(800px) rotateX(-180deg) translate(0, 100px);
+}
+
+/* Cartita */
+.carta {
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    width: 300px;
+    height: 810px;
+    
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .5s;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    background-color: #eeeeee;
+}
+
+.cara {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.carta-delantera {
+    transform: perspective(600px) rotateY(0deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.carta-trasera {
+    transform: perspective(600px) rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Contenedor Gaby y Lucy */
+.personitas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fotitos */
+.amor {
+    max-width: 150px;
+    height: 210px;
+    margin-top: 20px;
+}
+
+.cartaAbierta {
+    animation: cartaAbierta 6s forwards;
+}
+
+@keyframes cartaAbierta {
+    from {
+        transform: translate(-50%, -50%) scale(.2);
+    }
+    20% {
+        z-index: 99;
+        transform: translate(-50%, -80%) scale(.5);
+    }
+    60% {
+        z-index: 99;
+        transform: translate(-50%, -45%) scale(1);
+    }
+    99% {
+        z-index: 99;
+        transform: translate(-50%, -45%) scale(1);
+    }
+    to {
+        z-index: 100;
+        transform: translate(-50%, -45%) scale(1);
+    }
+}
+
+/* Carta al revés */
+.cartaLectura {
+    z-index: 100;
+    transform: translate(-50%, -45%) scale(1);
+}
+
+.reversa {
+    transform: translate(-50%, -45%) scale(1) rotateY(180deg);
+}
+
+@keyframes reversa {
+    from {
+        z-index: 100;
+        transform: translate(-50%, -30%) scale(1) rotateY(0);
+    }
+    to {
+        z-index: 100;
+        transform: translate(-50%, -30%) scale(1) rotateY(180deg);
+    }
+}
+
+/* ------------------------------------------- */
+/* Corazón */
+.corazon-padre {
+    transition: scale .2;
+}
+
+.corazon {
+    position: relative;
+    top: -120px;
+    width: var(--corazon);
+    height: var(--corazon);
+    background-color: #ff4757;
+    transform: rotate(-45deg);
+    animation: latidos 1s linear infinite;
+    z-index: 100;
+}
+
+.corazon::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: var(--corazon);
+    height: var(--corazon);
+    background-color: #ff4757;
+    border-radius: 50%;
+}
+
+.corazon::after {
+    content: '';
+    position: absolute;
+    right: -50%;
+    width: var(--corazon);
+    height: var(--corazon);
+    background-color: #ff4757;
+    border-radius: 50%;
+}
+
+/* Corazón grande */
+.grande {
+    animation: latidosGrande 1s linear infinite;
+    transform: rotate(45deg);
+}
+
+/* Corazón muy grande */
+.muyGrande {
+    animation: latidosMuyGrande 1s linear infinite;
+    transform: rotate(45deg);
+}
+
+/* Corazón volando */
+.volar {
+    animation: achicar-abajo 1s forwards;
+}
+
+@keyframes latidos {
+    0% {
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80% {
+        transform: rotate(-45deg) scale(1);
+    }
+    100% {
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+
+@keyframes latidosGrande {
+    0% {
+        transform: rotate(-45deg) scale(1.27);
+    }
+    80% {
+        transform: rotate(-45deg) scale(1.2);
+    }
+    100% {
+        transform: rotate(-45deg) scale(1);
+    }
+}
+
+@keyframes latidosMuyGrande {
+    0% {
+        transform: rotate(-45deg) scale(1.67);
+    }
+    80% {
+        transform: rotate(-45deg) scale(1.6);
+    }
+    100% {
+        transform: rotate(-45deg) scale(1.4);
+    }
+}
+
+@keyframes achicar-abajo {
+    from {
+        transform:  scale(1.3) translate(0%, 0%);  opacity: 0.8;
+    }
+    to {
+        transform:  scale(0)  translate(-100%, -550%) rotate(180deg);  opacity: 0;
+    }
+}
+
+/* ------------------- */
+.receptor {
+    font-size: 20px;
+}
+
+.parrafo {
+    font-size: 12px;
+    padding: 10px 0;
+}
+
+.emisor {
+    font-size: 15px;
+}
+
+.span {
+    text-align: center;
+}
+
+.mensaje {
+    color: rgb(17, 44, 221);
+    font-size: 12px;
+}
+
+.pantalla {
+    visibility: hidden;
+}

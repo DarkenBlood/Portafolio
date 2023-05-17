@@ -87,6 +87,7 @@
 					<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#sobre-mi" data-number="01">Sobre mí</a></li>
 					<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#mis-proyectos" data-number="02">Mis proyectos</a></li>
 					<li class="nav__item animate__animated animate__fadeInDown"><a class="nav-a" href="#contacto" data-number="03">Contacto</a></li>
+					<li><a class="nav-a" href="lucila.html">Lucy</a></li>
 				</ul>
 				<div class="nav-center caja-ojo caja-ojo-oculto">
 					<a id="ir-arriba" class="ojito" href="#inicio">
@@ -137,15 +138,12 @@
 				<h2 class="title-2 sobre-mi__text">Sobre mí</h2>
 				<div class="sobre-mi__container">
 					<div class="botones" role="tablist" id="botones">
-						<button class="boton" id="tab-0" tabindex="" role="tab"data-contenido="Botón 1">Yo</button>
+						<button class="boton activo" id="tab-0" tabindex="" role="tab"data-contenido="Botón 1">Yo</button>
 						<button class="boton" id="tab-1" tabindex="" role="tab" data-contenido="Botón 2">Lenguajes</button>
 						<button class="boton" id="tab-2" tabindex="" role="tab" data-contenido="Botón 3">Tecnologías</button>
 					</div>
 					<div class="card" id="contenido">
 						<article id="panel-start" class="panel" tabindex="-1" role="tabpanel">
-							<p class="txt descripcion">
-								Bienvenido
-							</p>
 						</article>
 						<article id="panel-0" class="panel" tabindex="0" role="tabpanel">
 							<img class="gabicito" src="assets/img/gabicito.jpg" alt="Gaby" role="presentation">
@@ -212,7 +210,7 @@
 										</div>
 										<div class="atropos__container" data-atropos-opacity="0;100%"> 
 											<h2 class="title-1-atropos">Proyecto de lotes</h2>
-											<a class="a-atropos" href="https://cañuelassur.com"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
+											<a class="a-atropos" href="https://cañuelassur.com" target="_blank"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
 										</div>
 									</div>
 								</div>
@@ -235,7 +233,7 @@
 										<div class="atropos__container" data-atropos-opacity="0;100%"> 
 											<!-- data-atropos-offset="0" -->
 											<h2 class="title-1-atropos">Proyecto de quintas</h2>
-											<a class="a-atropos" href="https://alquintas.com"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
+											<a class="a-atropos" href="https://alquintas.com" target="_blank"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
 										</div>
 									</div>
 								</div>
@@ -256,8 +254,8 @@
 											<img class="img-atropos" src="assets/img/proyecto3.png" data-atropos-offset="-5">
 										</div>
 										<div class="atropos__container" data-atropos-opacity="0;100%"> 
-											<h2 class="title-1-atropos">Proyecto de lotes</h2>
-											<a class="a-atropos" href="https://cañuelassur.com"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
+											<h2 class="title-1-atropos">Juego</h2>
+											<a class="a-atropos" href="https://botcarola.github.io/Game-JAM-CABA-2023/" target="_blank"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
 										</div>
 									</div>
 								</div>
@@ -325,7 +323,7 @@
 	<script src="frameworks/atropos/atropos.min.js"></script>
 
 	<script>
-		const myAtropos = Atropos({
+	const myAtropos = Atropos({
 	el: '.my-atropos',
 	// Parámetros
 	// rotateLock: true,
@@ -383,6 +381,14 @@ const myThirdAtropos = Atropos({
 	durationEnter: 0,
 	shadowScale: .75,
 	shadowOffset: 1,
+});
+
+const atropos = document.querySelector('.atropos-inner');
+
+atropos.addEventListener('click', () => {
+	myAtropos.leave();
+	mySecondAtropos.leave();
+	myThirdAtropos.leave();
 });
 	</script>
 <body>

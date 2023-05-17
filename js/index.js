@@ -193,8 +193,7 @@ enlaceInicio.addEventListener("click", function(event) {
 
 
 const botones = document.querySelectorAll('.boton');
-const paneles = document.querySelectorAll('[role="tabpanel"]');
-
+const paneles = document.querySelectorAll('.panel');
 botones.forEach((boton, index) => {
 	boton.addEventListener('click', () => {
     	// Ocultar los paneles que no correspondan al botón
@@ -212,3 +211,5 @@ botones.forEach((boton, index) => {
 		boton.classList.add('activo');
 	});
 });
+
+// Atropos
