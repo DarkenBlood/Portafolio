@@ -64,6 +64,10 @@
 			<div id="cursor" class="cursor"></div>
 		</div>
 		<div class="bordeado"></div>
+		<div class="bordeado-derecha"></div>
+		<div class="bordeado-izquierda"></div>
+		<div class="bordeado-arriba"></div>
+		<div class="bordeado-abajo"></div>
 	<!-- Audio -->
 		<audio id="audio">
 			<source type="audio/mpeg" src="assets/sonidos/miau.mp3">
@@ -216,7 +220,6 @@
 									<div class="atropos__container" data-atropos-opacity="0;100%"> 
 										<h2 class="title-1-atropos">Proyecto de lotes</h2>
 										<a class="a-atropos" href="https://cañuelassur.com" target="_blank"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
-										
 									</div>
 								</div>
 							</div>
@@ -241,7 +244,6 @@
 										<!-- data-atropos-offset="0" -->
 										<h2 class="title-1-atropos">Proyecto de quintas</h2>
 										<a class="a-atropos" href="https://alquintas.com" target="_blank"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
-										<div class="bordeado"></div>
 									</div>
 								</div>
 							</div>
@@ -264,7 +266,6 @@
 									<div class="atropos__container" data-atropos-opacity="0;100%"> 
 										<h2 class="title-1-atropos">Juego</h2>
 										<a class="a-atropos" href="https://botcarola.github.io/Game-JAM-CABA-2023/" target="_blank"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
-										<div class="bordeado"></div>
 									</div>
 								</div>
 							</div>
@@ -356,6 +357,8 @@
 
 	<script src="frameworks/atropos/atropos.min.js"></script>
 	<script>
+
+
 	const myAtropos = Atropos({
 	el: '.my-atropos',
 	// Parámetros
@@ -376,25 +379,31 @@
 	shadowScale: .75,
 	shadowOffset: 1,
 	// shadowScale: 0.5,
+	
 	onEnter() {
-		const imgContainer = document.querySelector(".img-container");
-		const todo = document.querySelector(".interno");
-		imgContainer.classList.add("img-container-max");
-		// todo.classList.add("focus");
-		console.log("enter");
+		borde.classList.add('bordeado-activo');
+		bordeArriba.classList.add('bordeado-activo');
+		bordeAbajo.classList.add('bordeado-activo');
 	},
 	onLeave() {
-		const imgContainer = document.querySelector(".img-container");
-		const todo = document.querySelector(".interno");
-		imgContainer.classList.remove("img-container-max");
-		
-		console.log("leave");
+		borde.classList.remove('bordeado-activo');
+		bordeArriba.classList.remove('bordeado-activo');
+		bordeAbajo.classList.remove('bordeado-activo');
 	}
 });
 
 const mySecondAtropos = Atropos({
     el: '.my-second-atropos',
 	// Parámetros
+	// rotateLock: true,
+	// rotateXMax: 15,
+	// rotateYMax: 15,
+	// shadow: true,
+	// shadowOffset: 10,
+	// shadowScale: 0.8,
+	// highlight: false,
+	// durationEnter: 600,
+	// activeOffset: 60
 	highlight: false,
 	rotateLock: true,
 	activeOffset: 40,
@@ -402,11 +411,32 @@ const mySecondAtropos = Atropos({
 	durationEnter: 0,
 	shadowScale: .75,
 	shadowOffset: 1,
+	// shadowScale: 0.5,
+	
+	onEnter() {
+		borde.classList.add('bordeado-activo');
+		bordeArriba.classList.add('bordeado-activo');
+		bordeAbajo.classList.add('bordeado-activo');
+	},
+	onLeave() {
+		borde.classList.remove('bordeado-activo');
+		bordeArriba.classList.remove('bordeado-activo');
+		bordeAbajo.classList.remove('bordeado-activo');
+	}
 });
 
 const myThirdAtropos = Atropos({
     el: '.my-third-atropos',
 	// Parámetros
+	// rotateLock: true,
+	// rotateXMax: 15,
+	// rotateYMax: 15,
+	// shadow: true,
+	// shadowOffset: 10,
+	// shadowScale: 0.8,
+	// highlight: false,
+	// durationEnter: 600,
+	// activeOffset: 60
 	highlight: false,
 	rotateLock: true,
 	activeOffset: 40,
@@ -414,6 +444,18 @@ const myThirdAtropos = Atropos({
 	durationEnter: 0,
 	shadowScale: .75,
 	shadowOffset: 1,
+	// shadowScale: 0.5,
+	
+	onEnter() {
+		borde.classList.add('bordeado-activo');
+		bordeArriba.classList.add('bordeado-activo');
+		bordeAbajo.classList.add('bordeado-activo');
+	},
+	onLeave() {
+		borde.classList.remove('bordeado-activo');
+		bordeArriba.classList.remove('bordeado-activo');
+		bordeAbajo.classList.remove('bordeado-activo');
+	}
 });
 
 const atropos = document.querySelector('.atropos-inner');

@@ -33,6 +33,7 @@
     
     /* Números */
     --delay: 0s;
+    --bordeado: 70px;
 
     /* Fuentes */
     --first-font: 'Quicksand', sans-serif;
@@ -935,15 +936,39 @@ section {
     height: 100%;
     pointer-events: none;
     opacity: 0;
-    background-color: rgba(255, 255, 255, 0.102);
-    backdrop-filter: blur(1px);
+    background-color: rgba(255, 255, 255, 0.122);
     z-index: 9999;
-    transition: opacity 0.3s ease;
+    transition: opacity .3s ease;
+}
+
+.bordeado-arriba {
+    position: fixed;
+    width: 100%;
+    height: var(--bordeado);
+    top: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.109), rgba(255, 255, 255, 0));
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transition: opacity .3s ease;
+}
+
+.bordeado-abajo {
+    position: fixed;
+    width: 100%;
+    height: var(--bordeado);
+    bottom: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.109), rgba(255, 255, 255, 0));
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transition: opacity .3s ease;
 }
 
 .bordeado-activo {
     opacity: 1;
 }
+
 
 /* Estilos de la sección de contacto */
 #contacto {

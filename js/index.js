@@ -228,15 +228,6 @@ function descargarArchivo() {
 
 // Bordeado
 const boton = document.querySelector('.a-atropos');
-const contornoDifuminado = document.querySelector('.bordeado');
-
-// Escuchar el evento hover sobre el botón
-boton.addEventListener('mouseover', () => {
-  // Agregar una clase al contorno difuminado para mostrarlo
-	contornoDifuminado.classList.add('bordeado-activo');
-});
-
-boton.addEventListener('mouseout', () => {
-  // Remover la clase del contorno difuminado para ocultarlo
-	contornoDifuminado.classList.remove('bordeado-activo');
-});
+const borde = document.querySelector('.bordeado');
+const bordeArriba = document.querySelector('.bordeado-arriba');
+const bordeAbajo = document.querySelector('.bordeado-abajo');
