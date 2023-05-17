@@ -230,3 +230,23 @@ const boton = document.querySelector('.a-atropos');
 const borde = document.querySelector('.bordeado');
 const bordeArriba = document.querySelector('.bordeado-arriba');
 const bordeAbajo = document.querySelector('.bordeado-abajo');
+
+
+// Nav Responsive
+const navActivation = document.querySelector('.nav-activation');
+const navResponsive = document.querySelector('.nav-responsive');
+const botonNavResponsive = document.querySelectorAll('.nav__item-responsive');
+
+function toggleMenu() {
+	navResponsive.classList.toggle('nav-active');
+	borde.classList.toggle('bordeado-activo');
+	console.log("sds");
+}
+
+navActivation.addEventListener('click', toggleMenu);
+
+
+
+botonNavResponsive.forEach((botonNav, index) => {
+	botonNav.addEventListener('click', toggleMenu);
+});
