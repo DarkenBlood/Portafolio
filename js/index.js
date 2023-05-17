@@ -225,3 +225,18 @@ function descargarArchivo() {
 	enlaceDescarga.download = 'CV-Gabriel_Johann_Rojas.pdf';
 	enlaceDescarga.click();
 }
+
+// Bordeado
+const boton = document.querySelector('.a-atropos');
+const contornoDifuminado = document.querySelector('.bordeado');
+
+// Escuchar el evento hover sobre el botón
+boton.addEventListener('mouseover', () => {
+  // Agregar una clase al contorno difuminado para mostrarlo
+	contornoDifuminado.classList.add('bordeado-activo');
+});
+
+boton.addEventListener('mouseout', () => {
+  // Remover la clase del contorno difuminado para ocultarlo
+	contornoDifuminado.classList.remove('bordeado-activo');
+});

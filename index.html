@@ -63,7 +63,7 @@
 		<div id="cursor__container" class="cursor__container">
 			<div id="cursor" class="cursor"></div>
 		</div>
-
+		<div class="bordeado"></div>
 	<!-- Audio -->
 		<audio id="audio">
 			<source type="audio/mpeg" src="assets/sonidos/miau.mp3">
@@ -145,7 +145,7 @@
 						<button class="boton activo" id="tab-0" tabindex="" role="tab"data-contenido="Botón 1">Acerca de mí</button>
 						<button class="boton" id="tab-1" tabindex="" role="tab" data-contenido="Botón 2">Lenguajes</button>
 						<button class="boton" id="tab-2" tabindex="" role="tab" data-contenido="Botón 3">Tecnologías</button>
-						<button class="boton cv" id="tab-3" tabindex="" role="tab" data-contenido="Botón 4">Descargar CV</button>
+						<button class="cv" id="tab-3" tabindex="" role="tab" data-contenido="Botón 4">Descargar CV</button>
 					</div>
 					<div class="card" id="contenido">
 						<article id="panel-start" class="panel" tabindex="-1" role="tabpanel">
@@ -197,76 +197,82 @@
 		</section>
 		<!-- Mis proyectos -->
 		<section id="mis-proyectos">
-				<!-- Carrusel -->
-				<h2  class="title-2 mis-proyectos__text">Mis proyectos</h2>
-				<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-					<div class="gallery-cell atroposes">
-						<!-- main Atropos container (required), add your custom class here -->
-						<div class="atropos my-atropos">
-							<!-- scale container (required) -->
-							<div class="atropos-scale">
-								<!-- rotate container (required) -->
-								<div class="atropos-rotate">
-									<!-- inner container (required) -->
-									<div class="atropos-inner">
-									<!-- put your custom content here -->
-										<div class="img-container">
-											<img class="img-atropos" src="assets/img/proyecto3.png" data-atropos-offset="-5">
-										</div>
-										<div class="atropos__container" data-atropos-opacity="0;100%"> 
-											<h2 class="title-1-atropos">Proyecto de lotes</h2>
-											<a class="a-atropos" href="https://cañuelassur.com" target="_blank"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
-										</div>
+			<!-- Carrusel -->
+			<h2  class="title-2 mis-proyectos__text">Mis proyectos</h2>
+			<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+				<div class="gallery-cell atroposes">
+					<!-- main Atropos container (required), add your custom class here -->
+					<div class="atropos my-atropos">
+						<!-- scale container (required) -->
+						<div class="atropos-scale">
+							<!-- rotate container (required) -->
+							<div class="atropos-rotate">
+								<!-- inner container (required) -->
+								<div class="atropos-inner">
+								<!-- put your custom content here -->
+									<div class="img-container">
+										<img class="img-atropos" src="assets/img/proyecto3.png" data-atropos-offset="-5">
+									</div>
+									<div class="atropos__container" data-atropos-opacity="0;100%"> 
+										<h2 class="title-1-atropos">Proyecto de lotes</h2>
+										<a class="a-atropos" href="https://cañuelassur.com" target="_blank"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
+										
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="gallery-cell atroposes">
-						<!-- main Atropos container (required), add your custom class here -->
-						<div class="atropos my-second-atropos">
-							<!-- scale container (required) -->
-							<div class="atropos-scale">
-								<!-- rotate container (required) -->
-								<div class="atropos-rotate">
-									<!-- inner container (required) -->
-									<div class="atropos-inner">
-									<!-- put your custom content here -->
-										<div class="img-container">
-											<img class="img-atropos" src="assets/img/proyecto2.png" data-atropos-offset="-5">
-										</div>
-										<div class="atropos__container" data-atropos-opacity="0;100%"> 
-											<!-- data-atropos-offset="0" -->
-											<h2 class="title-1-atropos">Proyecto de quintas</h2>
-											<a class="a-atropos" href="https://alquintas.com" target="_blank"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
-										</div>
+				</div>
+				
+				<div class="gallery-cell atroposes">
+					<!-- main Atropos container (required), add your custom class here -->
+					<div class="atropos my-second-atropos">
+						<!-- scale container (required) -->
+						<div class="atropos-scale">
+							<!-- rotate container (required) -->
+							<div class="atropos-rotate">
+								<!-- inner container (required) -->
+								<div class="atropos-inner">
+								<!-- put your custom content here -->
+									<div class="img-container">
+										<img class="img-atropos" src="assets/img/proyecto2.png" data-atropos-offset="-5">
+									</div>
+									<div class="atropos__container" data-atropos-opacity="0;100%"> 
+										<!-- data-atropos-offset="0" -->
+										<h2 class="title-1-atropos">Proyecto de quintas</h2>
+										<a class="a-atropos" href="https://alquintas.com" target="_blank"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
+										<div class="bordeado"></div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="gallery-cell atroposes">
-						<!-- main Atropos container (required), add your custom class here -->
-						<div class="atropos my-third-atropos">
-							<!-- scale container (required) -->
-							<div class="atropos-scale">
-								<!-- rotate container (required) -->
-								<div class="atropos-rotate">
-									<!-- inner container (required) -->
-									<div class="atropos-inner">
-									<!-- put your custom content here -->
-										<div class="img-container">
-											<img class="img-atropos" src="assets/img/proyecto3.png" data-atropos-offset="-5">
-										</div>
-										<div class="atropos__container" data-atropos-opacity="0;100%"> 
-											<h2 class="title-1-atropos">Juego</h2>
-											<a class="a-atropos" href="https://botcarola.github.io/Game-JAM-CABA-2023/" target="_blank"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
-										</div>
+				</div>
+				<div class="gallery-cell atroposes">
+					<!-- main Atropos container (required), add your custom class here -->
+					<div class="atropos my-third-atropos">
+						<!-- scale container (required) -->
+						<div class="atropos-scale">
+							<!-- rotate container (required) -->
+							<div class="atropos-rotate">
+								<!-- inner container (required) -->
+								<div class="atropos-inner">
+								<!-- put your custom content here -->
+									<div class="img-container">
+										<img class="img-atropos" src="assets/img/proyecto3.png" data-atropos-offset="-5">
+									</div>
+									<div class="atropos__container" data-atropos-opacity="0;100%"> 
+										<h2 class="title-1-atropos">Juego</h2>
+										<a class="a-atropos" href="https://botcarola.github.io/Game-JAM-CABA-2023/" target="_blank"><h3 class="title-3-atropos">Ingresar al proyecto</h3></a>
+										<div class="bordeado"></div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+				</div>
+				
+			</div>
 		</section>
 		<!-- Contacto -->
 		<section id="contacto">
@@ -338,6 +344,7 @@
 					data: $(this).serialize(),
 					success: function(response) {
 						$('.mensajeForm').text('Mensaje enviado correctamente');
+						$('.formulario')[0].reset();
 					},
 					error: function() {
 						$('.mensajeForm').text('Hubo un error al enviar el mensaje');

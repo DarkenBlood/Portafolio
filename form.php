@@ -2,9 +2,9 @@
 // Server Request
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Obtener los datos del formulario
-    $nombre = $_POST['nombre'];
+    $nombre = $_POST['name'];
     $email = $_POST['email'];
-    $mensaje = $_POST['mensaje'];
+    $mensaje = $_POST['message'];
 
     // Destinatario del correo electrónico
     $destinatario = 'gabriel.johann.rojas369@gmail.com';
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Construir el cuerpo del correo electrónico
     $cuerpo = "Nombre: " . $nombre . "\n";
     $cuerpo .= "Email: " . $email . "\n";
-    $cuerpo .= "Mensaje: " . $mensaje . "\n";
+    $cuerpo .=  $mensaje . "\n";
 
     // Cabeceras del correo electrónico
     $cabeceras = 'From: ' . $email . "\r\n" .
