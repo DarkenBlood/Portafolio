@@ -142,9 +142,10 @@
 				<h2 class="title-2 sobre-mi__text">Sobre mí</h2>
 				<div class="sobre-mi__container">
 					<div class="botones" role="tablist" id="botones">
-						<button class="boton activo" id="tab-0" tabindex="" role="tab"data-contenido="Botón 1">Yo</button>
+						<button class="boton activo" id="tab-0" tabindex="" role="tab"data-contenido="Botón 1">Acerca de mí</button>
 						<button class="boton" id="tab-1" tabindex="" role="tab" data-contenido="Botón 2">Lenguajes</button>
 						<button class="boton" id="tab-2" tabindex="" role="tab" data-contenido="Botón 3">Tecnologías</button>
+						<button class="boton cv" id="tab-3" tabindex="" role="tab" data-contenido="Botón 4">Descargar CV</button>
 					</div>
 					<div class="card" id="contenido">
 						<article id="panel-start" class="panel" tabindex="-1" role="tabpanel">
@@ -290,6 +291,7 @@
 							<input class="form__input form__submit" type="submit" name="Enviar" value="Enviar">
 						</fieldset>
 					</form>
+					<div class="mensajeForm"></div>
 				</div>
 		</section>
 		</main>
@@ -324,8 +326,28 @@
 	<!-- Librerías -->
 	<script src="https://kit.fontawesome.com/874b8521fa.js" crossorigin="anonymous"></script>
 	<script src="frameworks/flickity/flickity.pkgd.min.js"></script>
-	<script src="frameworks/atropos/atropos.min.js"></script>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.formulario').submit(function(e) {
+				e.preventDefault();
+				$.ajax({
+					url: $(this).attr('action'),
+					type: $(this).attr('method'),
+					data: $(this).serialize(),
+					success: function(response) {
+						$('.mensajeForm').text('Mensaje enviado correctamente');
+					},
+					error: function() {
+						$('.mensajeForm').text('Hubo un error al enviar el mensaje');
+					}
+				});
+			});
+		});
+	</script>
 
+	<script src="frameworks/atropos/atropos.min.js"></script>
 	<script>
 	const myAtropos = Atropos({
 	el: '.my-atropos',

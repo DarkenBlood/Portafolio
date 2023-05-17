@@ -214,4 +214,14 @@ botones.forEach((boton, index) => {
 	});
 });
 
-// Atropos
+// Botón CV
+const descargarCV = document.querySelector('.cv');
+
+descargarCV.addEventListener('click', descargarArchivo);
+
+function descargarArchivo() {
+	let enlaceDescarga = document.createElement('a');
+	enlaceDescarga.href = 'assets/CV.pdf';
+	enlaceDescarga.download = 'CV-Gabriel_Johann_Rojas.pdf';
+	enlaceDescarga.click();
+}
